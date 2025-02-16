@@ -1,1 +1,33 @@
-﻿
+﻿  Main_Dibujo2D.cpp
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwInit referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwSetFramebufferSizeCallback referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewBindBuffer referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewBufferData referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewGenBuffers referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewAttachShader referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewCompileShader referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewCreateProgram referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewCreateShader referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewDeleteShader referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewEnableVertexAttribArray referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewGetProgramInfoLog referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewGetProgramiv referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewGetShaderInfoLog referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewGetShaderiv referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewLinkProgram referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewShaderSource referenced in function "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewUseProgram referenced in function "public: void __cdecl Shader::Use(void)" (?Use@Shader@@QEAAXXZ)
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewVertexAttribPointer referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewBindVertexArray referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp___glewGenVertexArrays referenced in function main
+Main_Dibujo2D.obj : error LNK2019: unresolved external symbol __imp_glewExperimental referenced in function main
+D:\CompuGrafica\GraficaPractica1Copia\ConfigInicial\\External Libraries\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+D:\CompuGrafica\GraficaPractica1Copia\ConfigInicial\\External Libraries\GLFW\lib-vc2015\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+D:\CompuGrafica\GraficaPractica1Copia\ConfigInicial\x64\Debug\ConfigInicial.exe : fatal error LNK1120: 29 unresolved externals
