@@ -1,0 +1,33 @@
+﻿Main.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwInit referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwWindowHint referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwGetFramebufferSize referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp___glewBindBuffer referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp___glewBufferData referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp___glewGenBuffers referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp___glewAttachShader referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewCompileShader referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewCreateProgram referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewCreateShader referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewDeleteShader referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewEnableVertexAttribArray referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp___glewGetProgramInfoLog referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewGetProgramiv referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewGetShaderInfoLog referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewGetShaderiv referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewLinkProgram referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewShaderSource referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewUseProgram referenced in function "void __cdecl CrearShader(void)" (?CrearShader@@YAXXZ)
+Main.obj : error LNK2019: unresolved external symbol __imp___glewVertexAttribPointer referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp___glewBindVertexArray referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp___glewGenVertexArrays referenced in function main
+Main.obj : error LNK2019: unresolved external symbol __imp_glewExperimental referenced in function main
+C:\Users\alfon\OneDrive - Facultad de Ingeniería UNAM\Ingenieria UNAM\SEMESTRE08\Grafica\Project0b\\External Libraries\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\alfon\OneDrive - Facultad de Ingeniería UNAM\Ingenieria UNAM\SEMESTRE08\Grafica\Project0b\\External Libraries\GLFW\lib-vc2015\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\alfon\OneDrive - Facultad de Ingeniería UNAM\Ingenieria UNAM\SEMESTRE08\Grafica\Project0b\x64\Debug\Project0b.exe : fatal error LNK1120: 30 unresolved externals

@@ -1,0 +1,25 @@
+Todas las configuraciones, todas las plataformas.
+
+C/C++
+    General
+        Directorios de inclusión adicionales
+            <Editar><Carpeta nueva><2 Rutas>
+            $(SolutionDir)/External Libraries/GLEW/include
+            $(SolutionDir)/External Libraries/GLFW/include
+
+
+            <Sí castilla>
+
+Linker 
+    General
+        Aditional Library Directories
+            $(SolutionDir)/External Libraries/GLEW/lib/Release/Win32
+            $(SolutionDir)/External Libraries/GLFW/lib-vc2015
+
+            <Sí castilla>
+
+    Input
+        Additional Dependencies
+            opengl32.lib;glew32.lib;glfw3.lib;
+
+            <Sí castilla>
