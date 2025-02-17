@@ -59,14 +59,43 @@ int main() {
 
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	float vertices[] = {
-		0.5f,  0.5f, 0.0f,    1.0f,1.0f,1.0f,  // top right 0
-		0.5f, -0.5f, 0.0f,    1.0f,1.0f,0.0f,  // bottom right  1
-		-0.5f, -0.5f, 0.0f,   1.0f,1.0f,1.0f,  // bottom left  2
-		-0.5f,  0.5f, 0.0f,   1.0f,1.0f,0.0f, // top left   3
+		// Puntos originales 0-3
+		0.5f,  0.5f, 0.0f,    1.0f, 1.0f, 1.0f,  // top right 0
+		0.5f, -0.5f, 0.0f,    1.0f, 1.0f, 0.0f,  // bottom right 1
+		-0.5f, -0.5f, 0.0f,   1.0f, 1.0f, 1.0f,  // bottom left 2
+		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,  // top left 3
+
+		// Puntos alrededor del punto 0 (0.5, 0.5)   4-7
+		0.7f,  0.5f, 0.0f,    1.0f, 1.0f, 1.0f,  // derecha
+		0.3f,  0.5f, 0.0f,    1.0f, 0.0f, 1.0f,  // izquierda
+		0.5f,  0.7f, 0.0f,    1.0f, 1.0f, 0.0f,  // arriba
+		0.5f,  0.3f, 0.0f,    0.0f, 1.0f, 1.0f,  // abajo
+		 
+		// Puntos alrededor del punto 1 (0.5, -0.5)   8-11
+		0.7f, -0.5f, 0.0f,    1.0f, 1.0f, 0.0f,  // derecha
+		0.3f, -0.5f, 0.0f,    1.0f, 1.0f, 0.0f,  // izquierda
+		0.5f, -0.3f, 0.0f,    1.0f, 1.0f, 0.0f,  // arriba
+		0.5f, -0.7f, 0.0f,    1.0f, 1.0f, 0.0f,  // abajo
+
+		// Puntos alrededor del punto 2 (-0.5, -0.5)  12-15
+		-0.3f, -0.5f, 0.0f,   1.0f, 1.0f, 1.0f,  // derecha
+		-0.7f, -0.5f, 0.0f,   1.0f, 1.0f, 1.0f,  // izquierda
+		-0.5f, -0.3f, 0.0f,   1.0f, 1.0f, 1.0f,  // arriba
+		-0.5f, -0.7f, 0.0f,   1.0f, 1.0f, 1.0f,  // abajo
+
+		// Puntos alrededor del punto 3 (-0.5, 0.5)
+		-0.3f,  0.5f, 0.0f,   0.7f, 0.5f,0.3f,  // derecha
+		-0.7f,  0.5f, 0.0f,   1.0f, 0.3f, 0.0f,  // izquierda
+		-0.5f,  0.7f, 0.0f,   0.8f, 1.0f, 0.3f,  // arriba
+		-0.5f,  0.3f, 0.0f,   0.2f, 0.8f, 0.9f   // abajo
 	};
 	unsigned int indices[] = {  // note that we start from 0!
-		3,2,0,// second Triangle
-		0,1,3,
+		
+		3,19,17,
+		3,16,18,
+		4,5,7
+
+		
 		
 	};
 
@@ -120,14 +149,19 @@ int main() {
         glBindVertexArray(VAO);
 
 
-        //glPointSize(10);
-        //glDrawArrays(GL_POINTS,0,4);
+        glPointSize(10);
+        glDrawArrays(GL_POINTS,4,4);
         
-        //glDrawArrays(GL_LINES,0,4);
-        //glDrawArrays(GL_LINE_LOOP,0,4);
-        
-        glDrawArrays(GL_TRIANGLES,0,3);
-        glDrawElements(GL_TRIANGLES, 3,GL_UNSIGNED_INT,0);
+        glDrawArrays(GL_LINES,8,4);
+        glDrawArrays(GL_LINE_LOOP,12,4);
+		
+		 
+        glDrawArrays(GL_TRIANGLES,4,3);
+		
+
+		glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(24));
+		glDrawElements(GL_TRIANGLES,3 , GL_UNSIGNED_INT, (void*)(12));
+		glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 
         
         
