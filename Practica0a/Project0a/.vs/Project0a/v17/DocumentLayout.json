@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Grafica\\Practica0a\\Project0a\\",
+  "WorkspaceRootPath": "D:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\Grafica\\Practica0a\\Project0a\\Project0a\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Main_Dibujo2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "D:\\Grafica\\Practica0a\\Project0a\\Project0a\\Main.cpp",
-              "RelativeDocumentMoniker": "Project0a\\Main.cpp",
-              "ToolTip": "D:\\Grafica\\Practica0a\\Project0a\\Project0a\\Main.cpp",
-              "RelativeToolTip": "Project0a\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAA1AAAAAAAAAA==",
+              "Title": "Main_Dibujo2D.cpp",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp",
+              "RelativeDocumentMoniker": "Project0a\\Main_Dibujo2D.cpp",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp",
+              "RelativeToolTip": "Project0a\\Main_Dibujo2D.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-16T21:51:58.076Z",
+              "WhenOpened": "2025-02-17T17:01:42.3Z",
               "EditorCaption": ""
             }
           ]
