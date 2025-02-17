@@ -59,13 +59,13 @@ int main() {
 
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	float vertices[] = {
-		0.5f,  0.5f, 0.0f,    1.0f,0.0f,0.0f,  // top right
-		0.5f, -0.5f, 0.0f,    1.0f,1.0f,0.0f,  // bottom right
-		-0.5f, -0.5f, 0.0f,   1.0f,0.0f,1.0f,  // bottom left
-		-0.5f,  0.5f, 0.0f,   1.0f,1.0f,0.0f, // top left 
+		0.5f,  0.5f, 0.0f,    1.0f,1.0f,1.0f,  // top right 0
+		0.5f, -0.5f, 0.0f,    1.0f,1.0f,0.0f,  // bottom right  1
+		-0.5f, -0.5f, 0.0f,   1.0f,1.0f,1.0f,  // bottom left  2
+		-0.5f,  0.5f, 0.0f,   1.0f,1.0f,0.0f, // top left   3
 	};
 	unsigned int indices[] = {  // note that we start from 0!
-		3,2,1,// second Triangle
+		3,2,0,// second Triangle
 		0,1,3,
 		
 	};
@@ -120,14 +120,14 @@ int main() {
         glBindVertexArray(VAO);
 
 
-        glPointSize(1);
-        glDrawArrays(GL_POINTS,0,1);
+        //glPointSize(10);
+        //glDrawArrays(GL_POINTS,0,4);
         
-        //glDrawArrays(GL_LINES,0,2);
+        //glDrawArrays(GL_LINES,0,4);
         //glDrawArrays(GL_LINE_LOOP,0,4);
         
-        //glDrawArrays(GL_TRIANGLES,0,3);
-        //glDrawElements(GL_TRIANGLES, 3,GL_UNSIGNED_INT,0);
+        glDrawArrays(GL_TRIANGLES,0,3);
+        glDrawElements(GL_TRIANGLES, 3,GL_UNSIGNED_INT,0);
 
         
         
