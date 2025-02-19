@@ -38,8 +38,7 @@
               "RelativeToolTip": "Project0a\\Shader.h",
               "ViewState": "AgIAACIAAAAAAAAAAAAwwC4AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-17T17:06:01.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T17:06:01.838Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Project0a\\Shader\\core.frag",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T17:04:48.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T17:04:48.472Z"
             },
             {
               "$type": "Document",
@@ -64,8 +62,7 @@
               "RelativeToolTip": "Project0a\\Shader\\core.vs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T17:04:46.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T17:04:46.192Z"
             },
             {
               "$type": "Document",
@@ -73,9 +70,9 @@
               "Title": "Main_Dibujo2D.cpp",
               "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp",
               "RelativeDocumentMoniker": "Project0a\\Main_Dibujo2D.cpp",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp",
-              "RelativeToolTip": "Project0a\\Main_Dibujo2D.cpp",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAwwJ8AAAACAAAAAAAAAA==",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp*",
+              "RelativeToolTip": "Project0a\\Main_Dibujo2D.cpp*",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAJoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-17T17:01:42.3Z",
               "EditorCaption": ""
