@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\",
+  "WorkspaceRootPath": "D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Main_Dibujo2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Main_Dibujo2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|solutionrelative:ConfigInicial\\Main_Dibujo2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|solutionrelative:ConfigInicial\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A268A56F-CF2B-475D-A885-BB9DF370D95D}|ConfigInicial\\ConfigInicial.vcxproj|solutionrelative:ConfigInicial\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -28,9 +28,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "core.vs",
-              "DocumentMoniker": "C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader\\core.vs",
+              "DocumentMoniker": "D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader\\core.vs",
               "RelativeDocumentMoniker": "ConfigInicial\\Shader\\core.vs",
-              "ToolTip": "C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader\\core.vs",
+              "ToolTip": "D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader\\core.vs",
               "RelativeToolTip": "ConfigInicial\\Shader\\core.vs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -40,9 +40,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Shader.h",
-              "DocumentMoniker": "C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader.h",
+              "DocumentMoniker": "D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader.h",
               "RelativeDocumentMoniker": "ConfigInicial\\Shader.h",
-              "ToolTip": "C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader.h",
+              "ToolTip": "D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Shader.h",
               "RelativeToolTip": "ConfigInicial\\Shader.h",
               "ViewState": "AQIAABIAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -52,11 +52,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Main_Dibujo2D.cpp",
-              "DocumentMoniker": "C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Main_Dibujo2D.cpp",
+              "DocumentMoniker": "D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Main_Dibujo2D.cpp",
               "RelativeDocumentMoniker": "ConfigInicial\\Main_Dibujo2D.cpp",
-              "ToolTip": "C:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Main_Dibujo2D.cpp",
+              "ToolTip": "D:\\CompuGrafica\\GraficaPractica1Copia\\ConfigInicial\\ConfigInicial\\Main_Dibujo2D.cpp",
               "RelativeToolTip": "ConfigInicial\\Main_Dibujo2D.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-16T23:08:40.92Z",
               "EditorCaption": ""
