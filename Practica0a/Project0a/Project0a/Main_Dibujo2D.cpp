@@ -160,8 +160,8 @@ int main() {
 		
 
 		glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, (void*)(24));
-		//glDrawElements(GL_TRIANGLES,3 , GL_UNSIGNED_INT, (void*)(12));
-		//glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES,3 , GL_UNSIGNED_INT, (void*)(12));
+		glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 
         
         
