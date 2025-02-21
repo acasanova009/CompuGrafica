@@ -74,95 +74,98 @@ int main() {
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	// use with Orthographic Projection
 
-	GLfloat vertices[] = {
-       -0.5f*500, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,//Front
-		0.5f * 500, -0.5f * 500, 0.5f * 500,  1.0f, 0.0f,0.0f,
-		0.5f * 500,  0.5f * 500, 0.5f * 500,  1.0f, 0.0f,0.0f,
-		0.5f * 500,  0.5f * 500, 0.5f * 500,  1.0f, 0.0f,0.0f,
-		-0.5f * 500,  0.5f * 500, 0.5f * 500, 1.0f, 0.0f,0.0f,
-		-0.5f * 500, -0.5f * 500, 0.5f * 500, 1.0f, 0.0f,0.0f,
-		
-	    -0.5f * 500, -0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,//Back
-		 0.5f * 500, -0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
-		 0.5f * 500,  0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
-		 0.5f * 500,  0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
-	    -0.5f * 500,  0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
-	    -0.5f * 500, -0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
-		
-		 0.5f * 500, -0.5f * 500,  0.5f * 500,  0.0f, 0.0f,1.0f,
-		 0.5f * 500, -0.5f * 500, -0.5f * 500,  0.0f, 0.0f,1.0f,
-		 0.5f * 500,  0.5f * 500, -0.5f * 500,  0.0f, 0.0f,1.0f,
-		 0.5f * 500,  0.5f * 500, -0.5f * 500,  0.0f, 0.0f,1.0f,
-		 0.5f * 500,  0.5f * 500,  0.5f * 500,  0.0f, 0.0f,1.0f,
-		 0.5f * 500,  -0.5f * 500, 0.5f * 500, 0.0f, 0.0f,1.0f,
-      
-		-0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 1.0f,0.0f,
-		-0.5f * 500,  0.5f * 500, -0.5f * 500,  1.0f, 1.0f,0.0f,
-		-0.5f * 500, -0.5f * 500, -0.5f * 500,  1.0f, 1.0f,0.0f,
-		-0.5f * 500, -0.5f * 500, -0.5f * 500,  1.0f, 1.0f,0.0f,
-		-0.5f * 500, -0.5f * 500,  0.5f * 500,  1.0f, 1.0f,0.0f,
-		-0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 1.0f,0.0f,
-		
-		-0.5f * 500, -0.5f * 500, -0.5f * 500, 0.0f, 1.0f,1.0f,
-		0.5f * 500, -0.5f * 500, -0.5f * 500,  0.0f, 1.0f,1.0f,
-		0.5f * 500, -0.5f * 500,  0.5f * 500,  0.0f, 1.0f,1.0f,
-		0.5f * 500, -0.5f * 500,  0.5f * 500,  0.0f, 1.0f,1.0f,
-		-0.5f * 500, -0.5f * 500,  0.5f * 500, 0.0f, 1.0f,1.0f,
-		-0.5f * 500, -0.5f * 500, -0.5f * 500, 0.0f, 1.0f,1.0f,
-		
-		-0.5f * 500,  0.5f * 500, -0.5f * 500, 1.0f, 0.2f,0.5f,
-		0.5f * 500,  0.5f * 500, -0.5f * 500,  1.0f, 0.2f,0.5f,
-		0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 0.2f,0.5f,
-		0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 0.2f,0.5f,
-		-0.5f * 500,  0.5f * 500,  0.5f * 500, 1.0f, 0.2f,0.5f,
-		-0.5f * 500,  0.5f * 500, -0.5f * 500, 1.0f, 0.2f,0.5f,
-	};
+
+
+	////Matrices de proyeccion
+	//GLfloat vertices[] = {
+ //      -0.5f*500, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,//Front
+	//	0.5f * 500, -0.5f * 500, 0.5f * 500,  1.0f, 0.0f,0.0f,
+	//	0.5f * 500,  0.5f * 500, 0.5f * 500,  1.0f, 0.0f,0.0f,
+	//	0.5f * 500,  0.5f * 500, 0.5f * 500,  1.0f, 0.0f,0.0f,
+	//	-0.5f * 500,  0.5f * 500, 0.5f * 500, 1.0f, 0.0f,0.0f,
+	//	-0.5f * 500, -0.5f * 500, 0.5f * 500, 1.0f, 0.0f,0.0f,
+	//	
+	//    -0.5f * 500, -0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,//Back
+	//	 0.5f * 500, -0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
+	//	 0.5f * 500,  0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
+	//	 0.5f * 500,  0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
+	//    -0.5f * 500,  0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
+	//    -0.5f * 500, -0.5f * 500,-0.5f * 500, 0.0f, 1.0f,0.0f,
+	//	
+	//	 0.5f * 500, -0.5f * 500,  0.5f * 500,  0.0f, 0.0f,1.0f,
+	//	 0.5f * 500, -0.5f * 500, -0.5f * 500,  0.0f, 0.0f,1.0f,
+	//	 0.5f * 500,  0.5f * 500, -0.5f * 500,  0.0f, 0.0f,1.0f,
+	//	 0.5f * 500,  0.5f * 500, -0.5f * 500,  0.0f, 0.0f,1.0f,
+	//	 0.5f * 500,  0.5f * 500,  0.5f * 500,  0.0f, 0.0f,1.0f,
+	//	 0.5f * 500,  -0.5f * 500, 0.5f * 500, 0.0f, 0.0f,1.0f,
+ //     
+	//	-0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 1.0f,0.0f,
+	//	-0.5f * 500,  0.5f * 500, -0.5f * 500,  1.0f, 1.0f,0.0f,
+	//	-0.5f * 500, -0.5f * 500, -0.5f * 500,  1.0f, 1.0f,0.0f,
+	//	-0.5f * 500, -0.5f * 500, -0.5f * 500,  1.0f, 1.0f,0.0f,
+	//	-0.5f * 500, -0.5f * 500,  0.5f * 500,  1.0f, 1.0f,0.0f,
+	//	-0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 1.0f,0.0f,
+	//	
+	//	-0.5f * 500, -0.5f * 500, -0.5f * 500, 0.0f, 1.0f,1.0f,
+	//	0.5f * 500, -0.5f * 500, -0.5f * 500,  0.0f, 1.0f,1.0f,
+	//	0.5f * 500, -0.5f * 500,  0.5f * 500,  0.0f, 1.0f,1.0f,
+	//	0.5f * 500, -0.5f * 500,  0.5f * 500,  0.0f, 1.0f,1.0f,
+	//	-0.5f * 500, -0.5f * 500,  0.5f * 500, 0.0f, 1.0f,1.0f,
+	//	-0.5f * 500, -0.5f * 500, -0.5f * 500, 0.0f, 1.0f,1.0f,
+	//	
+	//	-0.5f * 500,  0.5f * 500, -0.5f * 500, 1.0f, 0.2f,0.5f,
+	//	0.5f * 500,  0.5f * 500, -0.5f * 500,  1.0f, 0.2f,0.5f,
+	//	0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 0.2f,0.5f,
+	//	0.5f * 500,  0.5f * 500,  0.5f * 500,  1.0f, 0.2f,0.5f,
+	//	-0.5f * 500,  0.5f * 500,  0.5f * 500, 1.0f, 0.2f,0.5f,
+	//	-0.5f * 500,  0.5f * 500, -0.5f * 500, 1.0f, 0.2f,0.5f,
+	//};
 	
 
 	// use with Perspective Projection
-	//float vertices[] = {
-	//	-0.5f, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,//Front
-	//	0.5f, -0.5f, 0.5f,  1.0f, 0.0f,0.0f,
-	//	0.5f,  0.5f, 0.5f,  1.0f, 0.0f,0.0f,
-	//	0.5f,  0.5f, 0.5f,  1.0f, 0.0f,0.0f,
-	//	-0.5f,  0.5f, 0.5f, 1.0f, 0.0f,0.0f,
-	//	-0.5f, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,
-	//	
-	//    -0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,//Back
-	//	 0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-	//	 0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-	//	 0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-	//    -0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-	//    -0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,
-	//	
-	//	 0.5f, -0.5f,  0.5f,  0.0f, 0.0f,1.0f,
-	//	 0.5f, -0.5f, -0.5f,  0.0f, 0.0f,1.0f,
-	//	 0.5f,  0.5f, -0.5f,  0.0f, 0.0f,1.0f,
-	//	 0.5f,  0.5f, -0.5f,  0.0f, 0.0f,1.0f,
-	//	 0.5f,  0.5f,  0.5f,  0.0f, 0.0f,1.0f,
-	//	 0.5f,  -0.5f, 0.5f, 0.0f, 0.0f,1.0f,
- //     
-	//	-0.5f,  0.5f,  0.5f,  1.0f, 1.0f,0.0f,
-	//	-0.5f,  0.5f, -0.5f,  1.0f, 1.0f,0.0f,
-	//	-0.5f, -0.5f, -0.5f,  1.0f, 1.0f,0.0f,
-	//	-0.5f, -0.5f, -0.5f,  1.0f, 1.0f,0.0f,
-	//	-0.5f, -0.5f,  0.5f,  1.0f, 1.0f,0.0f,
-	//	-0.5f,  0.5f,  0.5f,  1.0f, 1.0f,0.0f,
-	//	
-	//	-0.5f, -0.5f, -0.5f, 0.0f, 1.0f,1.0f,
-	//	0.5f, -0.5f, -0.5f,  0.0f, 1.0f,1.0f,
-	//	0.5f, -0.5f,  0.5f,  0.0f, 1.0f,1.0f,
-	//	0.5f, -0.5f,  0.5f,  0.0f, 1.0f,1.0f,
-	//	-0.5f, -0.5f,  0.5f, 0.0f, 1.0f,1.0f,
-	//	-0.5f, -0.5f, -0.5f, 0.0f, 1.0f,1.0f,
-	//	
-	//	-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
-	//	0.5f,  0.5f, -0.5f,  1.0f, 0.2f,0.5f,
-	//	0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
-	//	0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
-	//	-0.5f,  0.5f,  0.5f, 1.0f, 0.2f,0.5f,
-	//	-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
-	//};
+	float vertices[] = {
+		-0.5f, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,//Front
+		0.5f, -0.5f, 0.5f,  1.0f, 0.0f,0.0f,
+		0.5f,  0.5f, 0.5f,  1.0f, 0.0f,0.0f,
+		0.5f,  0.5f, 0.5f,  1.0f, 0.0f,0.0f,
+		-0.5f,  0.5f, 0.5f, 1.0f, 0.0f,0.0f,
+		-0.5f, -0.5f, 0.5f, 1.0f, 0.0f,0.0f,
+		
+	    -0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,//Back
+		 0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,
+		 0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
+		 0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
+	    -0.5f,  0.5f,-0.5f, 0.0f, 1.0f,0.0f,
+	    -0.5f, -0.5f,-0.5f, 0.0f, 1.0f,0.0f,
+		
+		 0.5f, -0.5f,  0.5f,  0.0f, 0.0f,1.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f, 0.0f,1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f,1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f, 0.0f,1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f, 0.0f,1.0f,
+		 0.5f,  -0.5f, 0.5f, 0.0f, 0.0f,1.0f,
+      
+		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f,0.0f,
+		-0.5f,  0.5f, -0.5f,  1.0f, 1.0f,0.0f,
+		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f,0.0f,
+		-0.5f, -0.5f, -0.5f,  1.0f, 1.0f,0.0f,
+		-0.5f, -0.5f,  0.5f,  1.0f, 1.0f,0.0f,
+		-0.5f,  0.5f,  0.5f,  1.0f, 1.0f,0.0f,
+		
+		-0.5f, -0.5f, -0.5f, 0.0f, 1.0f,1.0f,
+		0.5f, -0.5f, -0.5f,  0.0f, 1.0f,1.0f,
+		0.5f, -0.5f,  0.5f,  0.0f, 1.0f,1.0f,
+		0.5f, -0.5f,  0.5f,  0.0f, 1.0f,1.0f,
+		-0.5f, -0.5f,  0.5f, 0.0f, 1.0f,1.0f,
+		-0.5f, -0.5f, -0.5f, 0.0f, 1.0f,1.0f,
+		
+		-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
+		0.5f,  0.5f, -0.5f,  1.0f, 0.2f,0.5f,
+		0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
+		0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
+		-0.5f,  0.5f,  0.5f, 1.0f, 0.2f,0.5f,
+		-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
+	};
 
 
 
@@ -198,10 +201,13 @@ int main() {
 	glBindVertexArray(0); // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs)
 
 	
-	glm::mat4 projection=glm::mat4(1);
+	glm::mat4 projection=glm::mat4(1); //Cuatro Proyecciones
 
-	//projection = glm::perspective(45.0f, (GLfloat)screenWidth / (GLfloat)screenHeight, 0.1f, 100.0f);//FOV, Radio de aspecto,znear,zfar
-	projection = glm::ortho(0.0f, (GLfloat)screenWidth, 0.0f, (GLfloat)screenHeight, 0.1f, 1000.0f);//Izq,Der,Fondo,Alto,Cercania,Lejania
+	//projection = glm::ortho(0.0f, (GLfloat)screenWidth, 0.0f, (GLfloat)screenHeight, 0.1f, 1000.0f);//Izq,Der,Fondo,Alto,Cercania,Lejania
+	projection = glm::perspective(80.0f, (GLfloat)screenWidth / (GLfloat)screenHeight, 1.0f, 1000.0f);//FOV, Radio de aspecto,znear,zfar
+	
+
+
 	while (!glfwWindowShouldClose(window))
 	{
 		// Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
@@ -210,30 +216,44 @@ int main() {
 		// Render
 		// Clear the colorbuffer
 		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
 		// Draw our first triangle
 		ourShader.Use();
-		glm::mat4 model=glm::mat4(1);
-		glm::mat4 view=glm::mat4(1);
-	
-	 //  view = glm::translate(view, glm::vec3(0.0f,0.0f,0.0f));
-		//model = glm::rotate( model, 0.5f, glm::vec3( 1.0f, 0.0f, 0.0f ) ); // use to compare orthographic and perspective projection
-		//model = glm::scale(model, glm::vec3(500.0f, 500.0f, 500.0f));
-		//view = glm::translate( view, glm::vec3( screenWidth / 2, screenHeight / 2,-700.0f ) ); // use with orthographic projection
-		
+		glm::mat4 model = glm::mat4(1);
+		glm::mat4 view = glm::mat4(1);
+
+		view = glm::translate(view, glm::vec3(0.0f, 0.0f, -2.0f));
+		model = glm::rotate(model, 3.0f, glm::vec3(1.0f, 1.0f, -1.0f)); // use to compare orthographic and perspective projection
+		//model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
+		//view = glm::translate( view, glm::vec3( 500.0f, 300.0f,-400.0f ) ); // use with orthographic projection
+		//
 		GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
 		GLint viewLoc = glGetUniformLocation(ourShader.Program, "view");
 		GLint projecLoc = glGetUniformLocation(ourShader.Program, "projection");
-		
+
 		glUniformMatrix4fv(projecLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		
+
 
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
+		//AGREGAR MODELO
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(2.0f, 0.3f, -1.0f));
+		model = glm::rotate(model, 45.0f, glm::vec3(1.0f, 1.0f, 1.0f));
+		model = glm:: scale(model, glm::vec3(1.0f, 1.1f, 1.5f));
+
+		//AGREGAR MODELO, LLamada para que integre esto en la matriz.
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
 		glBindVertexArray(0);
 
 
