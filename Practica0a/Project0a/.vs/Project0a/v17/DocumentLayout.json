@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Main_Dibujo2D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_P3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Main_P3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,20 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Shader.h",
-              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
-              "RelativeDocumentMoniker": "Project0a\\Shader.h",
-              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
-              "RelativeToolTip": "Project0a\\Shader.h",
-              "ViewState": "AgIAACIAAAAAAAAAAAAwwC4AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-17T17:06:01.838Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -50,31 +34,33 @@
               "RelativeToolTip": "Project0a\\Shader\\core.frag",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T17:04:48.472Z"
+              "WhenOpened": "2025-02-21T19:40:10.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "core.vs",
               "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
               "RelativeDocumentMoniker": "Project0a\\Shader\\core.vs",
               "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
               "RelativeToolTip": "Project0a\\Shader\\core.vs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-17T17:04:46.192Z"
+              "WhenOpened": "2025-02-21T19:40:05.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Main_Dibujo2D.cpp",
-              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp",
-              "RelativeDocumentMoniker": "Project0a\\Main_Dibujo2D.cpp",
-              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Dibujo2D.cpp",
-              "RelativeToolTip": "Project0a\\Main_Dibujo2D.cpp",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAAAKMAAAACAAAAAAAAAA==",
+              "Title": "Main_P3.cpp",
+              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_P3.cpp",
+              "RelativeDocumentMoniker": "Project0a\\Main_P3.cpp",
+              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_P3.cpp",
+              "RelativeToolTip": "Project0a\\Main_P3.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-17T17:01:42.3Z",
+              "WhenOpened": "2025-02-21T19:39:21.506Z",
               "EditorCaption": ""
             }
           ]
