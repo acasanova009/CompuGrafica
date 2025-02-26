@@ -22,10 +22,10 @@ int main() {
 	glfwInit();
 	//Verificaci�n de compatibilidad 
 	// Set all the required options for GLFW
-	/*glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);*/
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
@@ -242,14 +242,14 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 
-		//AGREGAR MODELO
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(2.0f, 0.3f, -1.0f));
-		model = glm::rotate(model, 45.0f, glm::vec3(1.0f, 1.0f, 1.0f));
-		model = glm:: scale(model, glm::vec3(1.0f, 1.1f, 1.5f));
+		////AGREGAR MODELO
+		//model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(2.0f, 0.3f, -1.0f));
+		//model = glm::rotate(model, 45.0f, glm::vec3(1.0f, 1.0f, 1.0f));
+		//model = glm:: scale(model, glm::vec3(1.0f, 1.1f, 1.5f));
 
-		//AGREGAR MODELO, LLamada para que integre esto en la matriz.
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		////AGREGAR MODELO, LLamada para que integre esto en la matriz.
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
