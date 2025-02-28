@@ -38,8 +38,7 @@
               "RelativeToolTip": "Project0a\\Shader.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-27T03:47:22.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T18:16:42.756Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Project0a\\Shader\\core.frag",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-21T19:40:10.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T18:16:42.828Z"
             },
             {
               "$type": "Document",
@@ -64,8 +62,7 @@
               "RelativeToolTip": "Project0a\\Shader\\core.vs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-21T19:40:05.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T18:16:42.829Z"
             },
             {
               "$type": "Document",
@@ -75,13 +72,9 @@
               "RelativeDocumentMoniker": "Project0a\\Main_P3.cpp",
               "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_P3.cpp",
               "RelativeToolTip": "Project0a\\Main_P3.cpp",
-<<<<<<< HEAD
-              "ViewState": "AgIAAPwAAAAAAAAAAAAAAAsBAAAKAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAALMAAAAAAAAAAAAAAL0AAAAuAAAAAAAAAA==",
->>>>>>> 92fe565b05b75e41b3525eef915f4df4cda5cee5
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-21T19:39:21.506Z",
+              "WhenOpened": "2025-02-28T18:16:42.887Z",
               "EditorCaption": ""
             }
           ]
