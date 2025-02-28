@@ -134,6 +134,9 @@ int main() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
+
+
+    //------------------------------------------------INICIO RETICULA Y EJES.--------------
     // Crear un VAO y un VBO para los ejes
     GLuint axisVBO, axisVAO;
     glGenVertexArrays(1, &axisVAO);
@@ -157,7 +160,7 @@ int main() {
     glBindVertexArray(0);
 
 
-    //------------------------------------------------------- Inicio de la retícula--------------
+    //Inicio de la retícula--------------
     // Definir los vértices de la retícula (una cuadrícula en el plano XZ)
     std::vector<float> gridVertices;
     float gridSize = 1.0f;       // Tamaño de la retícula (de -1 a 1 en X y Z)
@@ -201,9 +204,9 @@ int main() {
     // Desvincular el VBO y el VAO
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-    //------------------------------------------------------- Final de la retícula--------------
+    //------------------------------------------------------- Final de la retícula Y EJES--------------
     // Configurar la matriz de proyección (perspectiva)
-    glm::mat4 projection = glm::perspective(45.0f, (GLfloat)screenWidth / (GLfloat)screenHeight, 0.1f,100.0f);
+    glm::mat4 projection = glm::perspective(45.0f, (GLfloat)screenWidth / (GLfloat)screenHeight, 0.1f, 100.0f);
 
     // Bucle de renderizado (se ejecuta continuamente hasta que se cierra la ventana)
     while (!glfwWindowShouldClose(window)) {
@@ -228,13 +231,13 @@ int main() {
         // Pasar las matrices de vista y proyección al shader
         glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
-        
-        
+
+
         // Dibujar el primer cubo con transformación (cubo original)
         glm::mat4 cubeModel1 = glm::mat4(1.0f);
-        
-        cubeModel1 = glm::scale(cubeModel1, glm::vec3(2.0f,2.0f, 2.0f));
-        cubeModel1 = glm::translate(cubeModel1, glm::vec3(0.3f, 0.1f, -0.2f)); 
+
+        cubeModel1 = glm::scale(cubeModel1, glm::vec3(2.0f, 2.0f, 2.0f));
+        cubeModel1 = glm::translate(cubeModel1, glm::vec3(0.3f, 0.1f, -0.2f));
 
         glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(cubeModel1));
         glBindVertexArray(cubeVAO);
@@ -246,7 +249,7 @@ int main() {
         cubeModel2 = glm::scale(cubeModel2, glm::vec3(1.0f, 2.0f, 1.0f));
         cubeModel2 = glm::translate(cubeModel2, glm::vec3(-0.5f, 0.1f, -0.5f));
         cubeModel2 = glm::rotate(cubeModel2, glm::radians(135.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-        
+
         glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(cubeModel2));
         glBindVertexArray(cubeVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -255,7 +258,7 @@ int main() {
 
         //Dibujar el tercer cubo (nuevo cubo)
         glm::mat4 cubeModel3 = glm::mat4(1.0f);
-        cubeModel3 = glm::translate(cubeModel3, glm::vec3(-0.5f,0.2f,0.5f));
+        cubeModel3 = glm::translate(cubeModel3, glm::vec3(-0.5f, 0.2f, 0.5f));
         cubeModel3 = glm::rotate(cubeModel3, glm::radians(-45.0f), glm::vec3(0.0f, 0.0f, 1.0f));
         cubeModel3 = glm::rotate(cubeModel3, glm::radians(215.0f), glm::vec3(0.0f, 1.0f, .0f));
         cubeModel3 = glm::scale(cubeModel3, glm::vec3(0.5f, 3.0f, 0.5f));
@@ -277,7 +280,8 @@ int main() {
         glBindVertexArray(cubeVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
-
+    }
+        //-------------------------DIUBJAR EJES Y RETICULA
         // Dibujar los ejes sin rotación (matriz de modelo identidad)
         glm::mat4 axisModel = glm::mat4(1.0f); // Matriz de modelo sin rotación
         glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(axisModel));
@@ -297,7 +301,7 @@ int main() {
         glBindVertexArray(0);
 
 
-        // fIN LA RETICULA
+        //-------------------------------FIN  EJES Y RETICULA
 
 
 
