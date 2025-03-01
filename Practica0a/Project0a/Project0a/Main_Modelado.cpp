@@ -1,4 +1,7 @@
+
+#define TINYOBJLOADER_IMPLEMENTATION
 #include <iostream>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -9,6 +12,7 @@
 #include <vector>
 
 #include "Shader.h"
+#include "tiny_obj_loader.h"
 
 void Inputs(GLFWwindow* window);
 void MouseCallback(GLFWwindow* window, double xpos, double ypos);
@@ -30,8 +34,115 @@ double lastX = WIDTH / 2.0; // Last X position of the mouse
 double lastY = HEIGHT / 2.0; // Last Y position of the mouse
 double lastZ = WIDTH / 2.0; // Last Y position of the mouse
 
-int main() {
+// Definiciones
+const int TORUS_MAJOR_SEGMENTS = 32; // Segmentos alrededor del toroide
+const int TORUS_MINOR_SEGMENTS = 16; // Segmentos de la sección transversal
+const float TORUS_MAJOR_RADIUS = 0.5f; // Radio mayor
+const float TORUS_MINOR_RADIUS = 0.2f; // Radio menor
+const float PI = 3.14159265359f;
 
+struct Vertex {
+    float position[3];
+    float normal[3];
+    float texcoord[2];
+};
+
+
+std::vector<Vertex> verticesOBJ;
+std::vector<unsigned int> indicesOBJ;
+
+
+void loadOBJ(const std::string& filename) {
+
+    tinyobj::attrib_t attrib;
+    std::vector<tinyobj::shape_t> shapes;
+    std::vector<tinyobj::material_t> materials;
+    std::string warn, err;
+
+    if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, filename.c_str())) {
+        std::cerr << "Error cargando modelo: " << err << std::endl;
+        return;
+    }
+
+    std::map<std::tuple<int, int, int>, unsigned int> uniqueVertices; // Para evitar duplicados
+
+    for (const auto& shape : shapes) {
+        for (const auto& index : shape.mesh.indices) {
+            std::tuple<int, int, int> key = { index.vertex_index, index.normal_index, index.texcoord_index };
+
+            if (uniqueVertices.count(key) == 0) {
+                Vertex vertex = {};
+
+                // Posiciones (v)
+                vertex.position[0] = attrib.vertices[3 * index.vertex_index + 0];
+                vertex.position[1] = attrib.vertices[3 * index.vertex_index + 1];
+                vertex.position[2] = attrib.vertices[3 * index.vertex_index + 2];
+
+                // Normales (vn) - Verifica si existen
+                if (!attrib.normals.empty()) {
+                    vertex.normal[0] = attrib.normals[3 * index.normal_index + 0];
+                    vertex.normal[1] = attrib.normals[3 * index.normal_index + 1];
+                    vertex.normal[2] = attrib.normals[3 * index.normal_index + 2];
+                }
+
+                // Coordenadas de textura (vt) - Verifica si existen
+                if (!attrib.texcoords.empty()) {
+                    vertex.texcoord[0] = attrib.texcoords[2 * index.texcoord_index + 0];
+                    vertex.texcoord[1] = attrib.texcoords[2 * index.texcoord_index + 1];
+                }
+
+                // Guardamos el nuevo vértice y su índice
+                uniqueVertices[key] = verticesOBJ.size();
+                verticesOBJ.push_back(vertex);
+            }
+
+            // Agregamos el índice del vértice
+            indicesOBJ.push_back(uniqueVertices[key]);
+        }
+    }
+
+    std::cout << "Modelo cargado: " << filename << " (" << verticesOBJ.size() << " vértices, " << indicesOBJ.size() << " índices)" << std::endl;
+}
+
+
+
+//
+//struct Vertex {
+//    float position[3];
+//    float normal[3];
+//};
+//
+//std::vector<Vertex> loadOBJ(const std::string& filename) {
+//    tinyobj::attrib_t attrib;
+//    std::vector<tinyobj::shape_t> shapes;
+//    std::vector<tinyobj::material_t> materials;
+//    std::string warn, err;
+//
+//    if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, filename.c_str())) {
+//        std::cerr << "Error cargando modelo: " << err << std::endl;
+//        return {};
+//    }
+//
+//    std::vector<Vertex> vertices;
+//    for (const auto& shape : shapes) {
+//        for (const auto& index : shape.mesh.indices) {
+//            Vertex vertex = {
+//                { attrib.vertices[3 * index.vertex_index + 0],  // X
+//                  attrib.vertices[3 * index.vertex_index + 1],  // Y
+//                  attrib.vertices[3 * index.vertex_index + 2] }, // Z
+//                { attrib.normals[3 * index.normal_index + 0],  // NX
+//                  attrib.normals[3 * index.normal_index + 1],  // NY
+//                  attrib.normals[3 * index.normal_index + 2] }  // NZ
+//            };
+//            vertices.push_back(vertex);
+//        }
+//    }
+//    return vertices;
+//}
+
+
+int main() {
+    
     
     glfwInit();
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
@@ -62,6 +173,9 @@ int main() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+
+    glDisable(GL_CULL_FACE);
 
     Shader ourShader("Shader/core.vs", "Shader/core.frag");
 
@@ -175,6 +289,48 @@ int main() {
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+
+
+
+	// ------------------------------------------------ TOWER ------------------------------------------------
+    
+    loadOBJ("modeloAuto.obj");
+
+    // Crear un VAO y un VBO para los ejes
+    GLuint bishopVBO, bishopVAO;
+    GLuint bishopEBO;
+    glGenVertexArrays(1, &bishopVAO);
+    glGenBuffers(1, &bishopVBO);
+    glGenBuffers(1, &bishopEBO);
+
+    glBindVertexArray(bishopVAO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bishopEBO);
+   
+    glBindBuffer(GL_ARRAY_BUFFER, bishopVBO);
+    glBufferData(GL_ARRAY_BUFFER, verticesOBJ.size() * sizeof(Vertex), verticesOBJ.data(), GL_STATIC_DRAW);
+
+
+
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(2);
+
+
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicesOBJ.size() * sizeof(unsigned int), indicesOBJ.data(), GL_STATIC_DRAW);
+
+
+    // Desvincular el VBO y el VAO
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+
+	//------------------------------------------------FIN TOWER------------------------------------------------
+    
 
     // Agregar 2/5
    //------------------------------------------------INICIO RETICULA Y EJES.--------------
@@ -351,6 +507,21 @@ int main() {
         glBindVertexArray(0);
 
 
+        //-------------------------------------- DIBUJAR BISHOP
+
+        glm::mat4 tower = glm::mat4(1.0f);
+       
+        tower = glm::scale(tower, glm::vec3(0.05f, 0.05f, 0.05f));
+        tower = glm::translate(tower, glm::vec3(1.0f, 6.9f, 0.0f));
+        tower = glm::rotate(tower, glm::radians(-20.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(tower));
+        glBindVertexArray(bishopVAO);
+        glDrawArrays(GL_TRIANGLES, 0, verticesOBJ.size());
+        glBindVertexArray(0);
+
+        
+
         // Agregar 4/5
         //-------------------------DIUBJAR EJES Y RETICULA
         // Dibujar los ejes sin rotación (matriz de modelo identidad)
@@ -389,6 +560,9 @@ int main() {
     glDeleteBuffers(1, &axisVBO);
     glDeleteVertexArrays(1, &gridVAO);
     glDeleteBuffers(1, &gridVAO);
+
+    glDeleteVertexArrays(1, &bishopVAO);
+    glDeleteBuffers(1, &bishopVBO);
     glfwTerminate();
     return EXIT_SUCCESS;
 }
@@ -462,14 +636,14 @@ void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
             // Rotate around X and Y axes (Ctrl + Right Click)
             rotx += yoffset; // Rotate around the X-axis (vertical movement)
             roty += xoffset; // Rotate around the Y-axis (horizontal movement)
-            std::cout << "Ctrl + Right Click: rotx = " << rotx << ", roty = " << roty << std::endl;
+           // std::cout << "Ctrl + Right Click: rotx = " << rotx << ", roty = " << roty << std::endl;
         
 
     }
         if (ctrlPressed && leftMousePressed ) {
             // Rotate around Z axis (Ctrl + Left Click)
             rotz += (xoffset + yoffset) * 0.5f; // Adjust the factor as needed
-            std::cout << "Ctrl + Left Click: rotz = " << rotz << std::endl;
+            //std::cout << "Ctrl + Left Click: rotz = " << rotz << std::endl;
         }
 }
 void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
