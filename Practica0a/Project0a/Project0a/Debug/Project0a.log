@@ -1,7 +1,8 @@
 ﻿  Main_Modelado.cpp
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(637,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(638,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(645,41): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(671,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(632,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(633,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(640,41): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(646,28): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(647,29): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(674,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
   Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe

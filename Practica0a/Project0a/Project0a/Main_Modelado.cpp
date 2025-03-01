@@ -34,12 +34,7 @@ double lastX = WIDTH / 2.0; // Last X position of the mouse
 double lastY = HEIGHT / 2.0; // Last Y position of the mouse
 double lastZ = WIDTH / 2.0; // Last Y position of the mouse
 
-// Definiciones
-const int TORUS_MAJOR_SEGMENTS = 32; // Segmentos alrededor del toroide
-const int TORUS_MINOR_SEGMENTS = 16; // Segmentos de la sección transversal
-const float TORUS_MAJOR_RADIUS = 0.5f; // Radio mayor
-const float TORUS_MINOR_RADIUS = 0.2f; // Radio menor
-const float PI = 3.14159265359f;
+
 
 struct Vertex {
     float position[3];
@@ -517,7 +512,7 @@ int main() {
 
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(tower));
         glBindVertexArray(bishopVAO);
-        glDrawArrays(GL_TRIANGLES, 0, verticesOBJ.size());
+        glDrawArrays(GL_TRIANGLES, 0, indicesOBJ.size());
         glBindVertexArray(0);
 
         
@@ -645,6 +640,14 @@ void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
             rotz += (xoffset + yoffset) * 0.5f; // Adjust the factor as needed
             //std::cout << "Ctrl + Left Click: rotz = " << rotz << std::endl;
         }
+
+        if (leftMousePressed && !ctrlPressed) {
+            // Rotate around Z axis (Ctrl + Left Click)
+            movX += xoffset/100.0f ; // Adjust the factor as needed
+            movY += yoffset / 100.0f; // Adjust the factor as needed
+            //std::cout << "Ctrl + Left Click: rotz = " << rotz << std::endl;
+        }
+
 }
 void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
     if (button == GLFW_MOUSE_BUTTON_RIGHT) {
