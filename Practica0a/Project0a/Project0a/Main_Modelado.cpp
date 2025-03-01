@@ -1,5 +1,4 @@
 
-#define TINYOBJLOADER_IMPLEMENTATION
 #include <iostream>
 
 #include <GL/glew.h>
@@ -12,7 +11,6 @@
 #include <vector>
 
 #include "Shader.h"
-#include "tiny_obj_loader.h"
 
 void Inputs(GLFWwindow* window);
 void MouseCallback(GLFWwindow* window, double xpos, double ypos);
@@ -33,107 +31,6 @@ bool leftMousePressed = false; // Track if right mouse button is pressed
 double lastX = WIDTH / 2.0; // Last X position of the mouse
 double lastY = HEIGHT / 2.0; // Last Y position of the mouse
 double lastZ = WIDTH / 2.0; // Last Y position of the mouse
-
-//
-//
-//struct Vertex {
-//    float position[3];
-//    float normal[3];
-//    float texcoord[2];
-//};
-
-//
-//std::vector<Vertex> verticesOBJ;
-//std::vector<unsigned int> indicesOBJ;
-
-//
-//void loadOBJ(const std::string& filename) {
-//
-//    tinyobj::attrib_t attrib;
-//    std::vector<tinyobj::shape_t> shapes;
-//    std::vector<tinyobj::material_t> materials;
-//    std::string warn, err;
-//
-//    if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, filename.c_str())) {
-//        std::cerr << "Error cargando modelo: " << err << std::endl;
-//        return;
-//    }
-//
-//    std::map<std::tuple<int, int, int>, unsigned int> uniqueVertices; // Para evitar duplicados
-//
-//    for (const auto& shape : shapes) {
-//        for (const auto& index : shape.mesh.indices) {
-//            std::tuple<int, int, int> key = { index.vertex_index, index.normal_index, index.texcoord_index };
-//
-//            if (uniqueVertices.count(key) == 0) {
-//                Vertex vertex = {};
-//
-//                // Posiciones (v)
-//                vertex.position[0] = attrib.vertices[3 * index.vertex_index + 0];
-//                vertex.position[1] = attrib.vertices[3 * index.vertex_index + 1];
-//                vertex.position[2] = attrib.vertices[3 * index.vertex_index + 2];
-//
-//                // Normales (vn) - Verifica si existen
-//                if (!attrib.normals.empty()) {
-//                    vertex.normal[0] = attrib.normals[3 * index.normal_index + 0];
-//                    vertex.normal[1] = attrib.normals[3 * index.normal_index + 1];
-//                    vertex.normal[2] = attrib.normals[3 * index.normal_index + 2];
-//                }
-//
-//                // Coordenadas de textura (vt) - Verifica si existen
-//                if (!attrib.texcoords.empty()) {
-//                    vertex.texcoord[0] = attrib.texcoords[2 * index.texcoord_index + 0];
-//                    vertex.texcoord[1] = attrib.texcoords[2 * index.texcoord_index + 1];
-//                }
-//
-//                // Guardamos el nuevo vértice y su índice
-//                uniqueVertices[key] = verticesOBJ.size();
-//                verticesOBJ.push_back(vertex);
-//            }
-//
-//            // Agregamos el índice del vértice
-//            indicesOBJ.push_back(uniqueVertices[key]);
-//        }
-//    }
-//
-//    std::cout << "Modelo cargado: " << filename << " (" << verticesOBJ.size() << " vértices, " << indicesOBJ.size() << " índices)" << std::endl;
-//}
-
-
-
-//
-//struct Vertex {
-//    float position[3];
-//    float normal[3];
-//};
-//
-//std::vector<Vertex> loadOBJ(const std::string& filename) {
-//    tinyobj::attrib_t attrib;
-//    std::vector<tinyobj::shape_t> shapes;
-//    std::vector<tinyobj::material_t> materials;
-//    std::string warn, err;
-//
-//    if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, filename.c_str())) {
-//        std::cerr << "Error cargando modelo: " << err << std::endl;
-//        return {};
-//    }
-//
-//    std::vector<Vertex> vertices;
-//    for (const auto& shape : shapes) {
-//        for (const auto& index : shape.mesh.indices) {
-//            Vertex vertex = {
-//                { attrib.vertices[3 * index.vertex_index + 0],  // X
-//                  attrib.vertices[3 * index.vertex_index + 1],  // Y
-//                  attrib.vertices[3 * index.vertex_index + 2] }, // Z
-//                { attrib.normals[3 * index.normal_index + 0],  // NX
-//                  attrib.normals[3 * index.normal_index + 1],  // NY
-//                  attrib.normals[3 * index.normal_index + 2] }  // NZ
-//            };
-//            vertices.push_back(vertex);
-//        }
-//    }
-//    return vertices;
-//}
 
 
 int main() {
@@ -174,49 +71,6 @@ int main() {
 
     Shader ourShader("Shader/core.vs", "Shader/core.frag");
 
-    //float vertices[] = {
-    //    -0.5f, -0.5f, 0.5f, 1.0f, 0.0f, 0.0f, // Front
-    //    0.5f, -0.5f, 0.5f, 1.0f, 0.0f, 0.0f,
-    //    0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f,
-    //    0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f,
-    //    -0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f,
-    //    -0.5f, -0.5f, 0.5f, 1.0f, 0.0f, 0.0f,
-
-    //    -0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // Back
-    //    0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-    //    0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-    //    0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-    //    -0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-    //    -0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
-
-    //    0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, // Right
-    //    0.5f, -0.5f, -0.5f, 0.0f, 0.0f, 1.0f,
-    //    0.5f, 0.5f, -0.5f, 0.0f, 0.0f, 1.0f,
-    //    0.5f, 0.5f, -0.5f, 0.0f, 0.0f, 1.0f,
-    //    0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f,
-    //    0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f,
-
-    //    -0.5f, 0.5f, 0.5f, 1.0f, 1.0f, 0.0f, // Left
-    //    -0.5f, 0.5f, -0.5f, 1.0f, 1.0f, 0.0f,
-    //    -0.5f, -0.5f, -0.5f, 1.0f, 1.0f, 0.0f,
-    //    -0.5f, -0.5f, -0.5f, 1.0f, 1.0f, 0.0f,
-    //    -0.5f, -0.5f, 0.5f, 1.0f, 1.0f, 0.0f,
-    //    -0.5f, 0.5f, 0.5f, 1.0f, 1.0f, 0.0f,
-
-    //    -0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 1.0f, // Bottom
-    //    0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 1.0f,
-    //    0.5f, -0.5f, 0.5f, 0.0f, 1.0f, 1.0f,
-    //    0.5f, -0.5f, 0.5f, 0.0f, 1.0f, 1.0f,
-    //    -0.5f, -0.5f, 0.5f, 0.0f, 1.0f, 1.0f,
-    //    -0.5f, -0.5f, -0.5f, 0.0f, 1.0f, 1.0f,
-
-    //    -0.5f, 0.5f, -0.5f, 1.0f, 0.2f, 0.5f, // Top
-    //    0.5f, 0.5f, -0.5f, 1.0f, 0.2f, 0.5f,
-    //    0.5f, 0.5f, 0.5f, 1.0f, 0.2f, 0.5f,
-    //    0.5f, 0.5f, 0.5f, 1.0f, 0.2f, 0.5f,
-    //    -0.5f, 0.5f, 0.5f, 1.0f, 0.2f, 0.5f,
-    //    -0.5f, 0.5f, -0.5f, 1.0f, 0.2f, 0.5f,
-    //};
 
     float vertices[] = {
         // Front face (Café claro a café medio)
@@ -286,46 +140,6 @@ int main() {
     glBindVertexArray(0);
 
 
-
-	//// ------------------------------------------------ TOWER ------------------------------------------------
- //   
- //   loadOBJ("modeloAuto.obj");
-
- //   // Crear un VAO y un VBO para los ejes
- //   GLuint bishopVBO, bishopVAO;
- //   GLuint bishopEBO;
- //   glGenVertexArrays(1, &bishopVAO);
- //   glGenBuffers(1, &bishopVBO);
- //   glGenBuffers(1, &bishopEBO);
-
- //   glBindVertexArray(bishopVAO);
- //   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bishopEBO);
- //  
- //   glBindBuffer(GL_ARRAY_BUFFER, bishopVBO);
- //   glBufferData(GL_ARRAY_BUFFER, verticesOBJ.size() * sizeof(Vertex), verticesOBJ.data(), GL_STATIC_DRAW);
-
-
-
-
- //   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
- //   glEnableVertexAttribArray(0);
-
- //   glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(3 * sizeof(float)));
- //   glEnableVertexAttribArray(1);
-
- //   glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(6 * sizeof(float)));
- //   glEnableVertexAttribArray(2);
-
-
- //   glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicesOBJ.size() * sizeof(unsigned int), indicesOBJ.data(), GL_STATIC_DRAW);
-
-
- //   // Desvincular el VBO y el VAO
- //   glBindBuffer(GL_ARRAY_BUFFER, 0);
- //   glBindVertexArray(0);
-
-	////------------------------------------------------FIN TOWER------------------------------------------------
- //   
 
     // Agregar 2/5
    //------------------------------------------------INICIO RETICULA Y EJES.--------------
@@ -435,10 +249,10 @@ int main() {
         glm::mat4 view = glm::mat4(1);
         glm::mat4 model = glm::mat4(1);
         // movZ / 10.0f -
-        view = glm::translate(view, glm::vec3(movX , movY , movZ -2.0f));
-        view = glm::rotate(view, glm::radians(roty), glm::vec3(0.0f, 1.0f, 0.0f));
-        view = glm::rotate(view, glm::radians(-rotx), glm::vec3(1.0f, 0.0f, 0.0f));
-        view = glm::rotate(view, glm::radians(rotz), glm::vec3(0.0f, 0.0f, 1.0f));
+        view = glm::translate(view, glm::vec3(movX , movY , movZ +1.0f));
+        view = glm::rotate(view, glm::radians(roty+ -40.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        view = glm::rotate(view, glm::radians(-rotx + 30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        view = glm::rotate(view, glm::radians(rotz + -20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 
         GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
         GLint viewLoc = glGetUniformLocation(ourShader.Program, "view");
@@ -446,77 +260,35 @@ int main() {
 
         glUniformMatrix4fv(projecLoc, 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        
             
-        glBindVertexArray(VAO);
+      /*  glBindVertexArray(VAO);
         model = glm::mat4(1.0f);
         model = glm::scale(model, glm::vec3(1.5f, 0.05f, 1.0f));
         model = glm::translate(model, glm::vec3(0.0f, 5.0f, 0.0f));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-
-
-        //DIBJUAR PATAS:
-
-
-
-        glm::mat4 pata1 = glm::mat4(1.0f);
-        pata1 = glm::scale(pata1, glm::vec3(0.1f, 0.5f, 0.1f));
-
-        pata1 = glm::translate(pata1, glm::vec3(7.0f, -0.05f, 4.5f));
-
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(pata1));
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-
-
-
-        glm::mat4 pata2 = glm::mat4(1.0f);
-        pata2 = glm::scale(pata2, glm::vec3(0.1f, 0.5f, 0.1f));
-
-        pata2 = glm::translate(pata2, glm::vec3(-7.0f, -0.05f, 4.5f));
-
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(pata2));
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-
-
-
-        glm::mat4 pata3 = glm::mat4(1.0f);
-        pata3 = glm::scale(pata3, glm::vec3(0.1f, 0.5f, 0.1f));
-        pata3 = glm::translate(pata3, glm::vec3(7.0f, -0.05f, -4.5f));
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(pata3));
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-
-        glm::mat4 pata4 = glm::mat4(1.0f);
-        pata4 = glm::scale(pata4, glm::vec3(0.1f, 0.5f, 0.1f));
-        pata4 = glm::translate(pata4, glm::vec3(-7.0f, -0.05f, -4.5f));
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(pata4));
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-
-
-        //-------------------------------------- DIBUJAR BISHOP
-
-       /* glm::mat4 tower = glm::mat4(1.0f);
-       
-        tower = glm::scale(tower, glm::vec3(0.05f, 0.05f, 0.05f));
-        tower = glm::translate(tower, glm::vec3(1.0f, 6.9f, 0.0f));
-        tower = glm::rotate(tower, glm::radians(-20.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(tower));
-        glBindVertexArray(bishopVAO);
-        glDrawArrays(GL_TRIANGLES, 0, indicesOBJ.size());
         glBindVertexArray(0);*/
+
 
         
 
+
+        //Prototipo de nuevo modelo
+        //glm::mat4 pata1 = glm::mat4(1.0f);
+        //pata1 = glm::scale(pata1, glm::vec3(0.1f, 0.5f, 0.1f));
+
+        //pata1 = glm::translate(pata1, glm::vec3(7.0f, -0.05f, 4.5f));
+
+        //glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(pata1));
+        //glBindVertexArray(VAO);
+        //glDrawArrays(GL_TRIANGLES, 0, 36);
+        //glBindVertexArray(0);
+
+
+
+
+ 
         // Agregar 4/5
         //-------------------------DIUBJAR EJES Y RETICULA
         // Dibujar los ejes sin rotación (matriz de modelo identidad)
@@ -595,25 +367,7 @@ void Inputs(GLFWwindow* window) {
         rotz -= 0.4f;
 }
 
-//void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
-//    if (ctrlPressed && rightMousePressed) {
-//        double xoffset = xpos - lastX;
-//        double yoffset = lastY - ypos; // Reversed since y-coordinates go from bottom to top
-//
-//        std::cout << "Both ctrl and right: "<<roty<< std::endl;
-//        
-//        lastX = xpos;
-//        lastY = ypos;
-//
-//        float sensitivity = 0.5f; // Adjust sensitivity as needed
-//        xoffset *= sensitivity;
-//        yoffset *= sensitivity;
-//
-//        // Update rotation angles
-//        rotx+= xoffset; // Rotate around the Y-axis (horizontal movement)
-//        roty+= yoffset; // Rotate around the X-axis (vertical movement)
-//    }
-//}
+
 
 void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
         double xoffset = xpos - lastX;

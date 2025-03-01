@@ -1,9 +1,9 @@
 ﻿  Main_Modelado.cpp
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(632,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(633,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(640,41): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(646,28): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(647,29): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(674,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(386,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(387,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(394,41): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(400,28): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(401,29): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Main_Modelado.cpp(428,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
