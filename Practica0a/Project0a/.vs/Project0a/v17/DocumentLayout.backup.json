@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Project0a\\Modelado_Jerarquico.cpp",
               "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Modelado_Jerarquico.cpp",
               "RelativeToolTip": "Project0a\\Modelado_Jerarquico.cpp",
-              "ViewState": "AgIAANsAAAAAAAAAAAAgwOgAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAwwPEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-07T19:56:02.307Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Project0a\\Shader\\core.vs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-07T19:39:28.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T19:39:28.276Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Project0a\\Shader\\core.frag",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-07T18:06:16.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T18:06:16.247Z"
             }
           ]
         }
