@@ -7,11 +7,7 @@
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Main_Modelado.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CompuGrafica\\ArchivosPr\u00E1ctica3\\ModeladoGeometrico\\Main_Modelado.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_P3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Project0a\\Main_P3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alfon\\OneDrive - Facultad de Ingenier\u00EDa UNAM\\Ingenieria UNAM\\SEMESTRE08\\Grafica\\LABORATORIO\\Modelado Jer\u00E1rquico\\Modelado_Jerarquico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -33,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,12 +37,53 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Shader.h",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
+              "RelativeDocumentMoniker": "Project0a\\Shader.h",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
+              "RelativeToolTip": "Project0a\\Shader.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAGUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-07T18:08:41.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "core.vs",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
+              "RelativeDocumentMoniker": "Project0a\\Shader\\core.vs",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
+              "RelativeToolTip": "Project0a\\Shader\\core.vs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-07T18:06:17.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "core.frag",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
+              "RelativeDocumentMoniker": "Project0a\\Shader\\core.frag",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
+              "RelativeToolTip": "Project0a\\Shader\\core.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-07T18:06:16.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Main_Modelado.cpp",
-              "DocumentMoniker": "C:\\CompuGrafica\\ArchivosPr\u00E1ctica3\\ModeladoGeometrico\\Main_Modelado.cpp",
-              "ToolTip": "C:\\CompuGrafica\\ArchivosPr\u00E1ctica3\\ModeladoGeometrico\\Main_Modelado.cpp",
+              "Title": "Modelado_Jerarquico.cpp",
+              "DocumentMoniker": "C:\\Users\\alfon\\OneDrive - Facultad de Ingenier\u00EDa UNAM\\Ingenieria UNAM\\SEMESTRE08\\Grafica\\LABORATORIO\\Modelado Jer\u00E1rquico\\Modelado_Jerarquico.cpp",
+              "ToolTip": "C:\\Users\\alfon\\OneDrive - Facultad de Ingenier\u00EDa UNAM\\Ingenieria UNAM\\SEMESTRE08\\Grafica\\LABORATORIO\\Modelado Jer\u00E1rquico\\Modelado_Jerarquico.cpp",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAAANEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-28T20:37:03.709Z"
+              "WhenOpened": "2025-03-07T18:05:47.171Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,58 +93,10 @@
               "RelativeDocumentMoniker": "Project0a\\Main_Modelado.cpp",
               "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_Modelado.cpp",
               "RelativeToolTip": "Project0a\\Main_Modelado.cpp",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAEoAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAGYBAAAAAAAAAADgv3MBAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-28T19:16:09.679Z",
+              "WhenOpened": "2025-03-07T17:53:56.199Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Main_P3.cpp",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_P3.cpp",
-              "RelativeDocumentMoniker": "Project0a\\Main_P3.cpp",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Main_P3.cpp",
-              "RelativeToolTip": "Project0a\\Main_P3.cpp",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAA8BAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-28T19:15:32.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Shader.h",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
-              "RelativeDocumentMoniker": "Project0a\\Shader.h",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
-              "RelativeToolTip": "Project0a\\Shader.h",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGIAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-28T18:16:42.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "core.frag",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
-              "RelativeDocumentMoniker": "Project0a\\Shader\\core.frag",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
-              "RelativeToolTip": "Project0a\\Shader\\core.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-28T18:16:42.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "core.vs",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
-              "RelativeDocumentMoniker": "Project0a\\Shader\\core.vs",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
-              "RelativeToolTip": "Project0a\\Shader\\core.vs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-28T18:16:42.829Z"
             }
           ]
         }

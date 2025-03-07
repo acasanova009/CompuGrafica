@@ -70,9 +70,11 @@ int main() {
     glDisable(GL_CULL_FACE);
 
     Shader ourShader("Shader/core.vs", "Shader/core.frag");
+    //For model
+    float	hombro = 0.0f;
 
 
-    float vertices[] = {
+    float vertices2[] = {
         // Front face (Café claro a café medio)
         -0.5f, -0.5f,  0.5f,  0.8f, 0.6f, 0.4f, // Café claro
          0.5f, -0.5f,  0.5f,  0.7f, 0.5f, 0.3f,
@@ -121,6 +123,56 @@ int main() {
          -0.5f,  0.5f,  0.5f,  0.7f, 0.5f, 0.3f,
          -0.5f,  0.5f, -0.5f,  0.8f, 0.6f, 0.4f
     };
+
+
+    // use with Perspective Projection
+    float vertices[] = {
+        -0.5f, -0.5f, 0.5f,
+        0.5f, -0.5f, 0.5f,
+        0.5f,  0.5f, 0.5f,
+        0.5f,  0.5f, 0.5f,
+        -0.5f,  0.5f, 0.5f,
+        -0.5f, -0.5f, 0.5f,
+
+        -0.5f, -0.5f,-0.5f,
+         0.5f, -0.5f,-0.5f,
+         0.5f,  0.5f,-0.5f,
+         0.5f,  0.5f,-0.5f,
+        -0.5f,  0.5f,-0.5f,
+        -0.5f, -0.5f,-0.5f,
+
+         0.5f, -0.5f,  0.5f,
+         0.5f, -0.5f, -0.5f,
+         0.5f,  0.5f, -0.5f,
+         0.5f,  0.5f, -0.5f,
+         0.5f,  0.5f,  0.5f,
+         0.5f,  -0.5f, 0.5f,
+
+        -0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f, -0.5f,
+        -0.5f, -0.5f, -0.5f,
+        -0.5f, -0.5f, -0.5f,
+        -0.5f, -0.5f,  0.5f,
+        -0.5f,  0.5f,  0.5f,
+
+        -0.5f, -0.5f, -0.5f,
+        0.5f, -0.5f, -0.5f,
+        0.5f, -0.5f,  0.5f,
+        0.5f, -0.5f,  0.5f,
+        -0.5f, -0.5f,  0.5f,
+        -0.5f, -0.5f, -0.5f,
+
+        -0.5f,  0.5f, -0.5f,
+        0.5f,  0.5f, -0.5f,
+        0.5f,  0.5f,  0.5f,
+        0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f,  0.5f,
+        -0.5f,  0.5f, -0.5f,
+    };
+
+
+
+
 
     GLuint VBO, VAO;
     glGenVertexArrays(1, &VAO);
@@ -232,6 +284,9 @@ int main() {
     glfwSetScrollCallback(window, ScrollCallback);
     glfwSetMouseButtonCallback(window, MouseButtonCallback);
 
+    glm::vec3 color = glm::vec3(0.0f, 0.0f, 1.0f);
+
+    float same = 1.0f;
 
     while (!glfwWindowShouldClose(window)) {
 
@@ -242,12 +297,16 @@ int main() {
 
 
 
+        glClearColor(same, same, same,same);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 
         ourShader.Use();
         glm::mat4 view = glm::mat4(1);
         glm::mat4 model = glm::mat4(1);
+        glm::mat4 modelTemp = glm::mat4(1.0f); //Temp
+        glm::mat4 modelTemp2 = glm::mat4(1.0f); //Temp
+
+
         // movZ / 10.0f -
         view = glm::translate(view, glm::vec3(movX , movY , movZ +1.0f));
         view = glm::rotate(view, glm::radians(roty+ -40.0f), glm::vec3(0.0f, 1.0f, 0.0f));
@@ -257,12 +316,27 @@ int main() {
         GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
         GLint viewLoc = glGetUniformLocation(ourShader.Program, "view");
         GLint projecLoc = glGetUniformLocation(ourShader.Program, "projection");
+        GLint uniformColor = ourShader.uniformColor;
 
         glUniformMatrix4fv(projecLoc, 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+
+        glBindVertexArray(VAO);
+        //Model 
+        model = glm::rotate(model, glm::radians(hombro), glm::vec3(0.0f, 0.0, 1.0f)); //hombro
+        modelTemp = model = glm::translate(model, glm::vec3(1.5f, 0.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(3.0f, 1.0f, 1.0f));
+        color = glm::vec3(0.0f, 0.0f, 1.0f);
+        glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+        
+        glDrawArrays(GL_TRIANGLES, 0, 36);//A
+        glBindVertexArray(0);
+
         
             
-      /*  glBindVertexArray(VAO);
+       /* glBindVertexArray(VAO);
         model = glm::mat4(1.0f);
         model = glm::scale(model, glm::vec3(1.5f, 0.05f, 1.0f));
         model = glm::translate(model, glm::vec3(0.0f, 5.0f, 0.0f));
@@ -383,8 +457,8 @@ void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
 
         
             // Rotate around X and Y axes (Ctrl + Right Click)
-            rotx += yoffset; // Rotate around the X-axis (vertical movement)
-            roty += xoffset; // Rotate around the Y-axis (horizontal movement)
+            rotx += (float)yoffset; // Rotate around the X-axis (vertical movement)
+            roty += (float)xoffset; // Rotate around the Y-axis (horizontal movement)
            // std::cout << "Ctrl + Right Click: rotx = " << rotx << ", roty = " << roty << std::endl;
         
 
