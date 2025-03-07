@@ -1,2 +1,8 @@
 ﻿  Modelado_Jerarquico.cpp
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(545,20): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(546,20): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(552,32): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(558,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(559,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(587,19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
   Project0a.vcxproj -> C:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
