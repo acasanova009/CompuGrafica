@@ -297,8 +297,8 @@ int main() {
 
 
 
-        glClearColor(same, same, same,same);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glClearColor(same, same, same,same);
 
         ourShader.Use();
         glm::mat4 view = glm::mat4(1);
@@ -321,7 +321,7 @@ int main() {
         glUniformMatrix4fv(projecLoc, 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+       glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 
         glBindVertexArray(VAO);
         //Model 
@@ -378,6 +378,7 @@ int main() {
         // Dibujar LA RETICULA
 
         glm::mat4 gridModel = glm::mat4(1.0f); // Matriz de modelo para la retícula (sin transformación)
+        glUniform4f(ourShader.getColorLocation(), 0.2f, 0.4f, 0.7f, 1.0f); // Color gris para la retícula
         glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(gridModel));
         glBindVertexArray(gridVAO);
         glDrawArrays(GL_LINES, 0, gridVertices.size() / 6); // Dibujar líneas
