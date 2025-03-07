@@ -1,21 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\CompuGrafica\\Practica0a\\Project0a\\",
+  "WorkspaceRootPath": "C:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alfon\\OneDrive - Facultad de Ingenier\u00EDa UNAM\\Ingenieria UNAM\\SEMESTRE08\\Grafica\\LABORATORIO\\Modelado Jer\u00E1rquico\\Modelado_Jerarquico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Modelado_Jerarquico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Modelado_Jerarquico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\core.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,52 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Shader.h",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
-              "RelativeDocumentMoniker": "Project0a\\Shader.h",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
-              "RelativeToolTip": "Project0a\\Shader.h",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAD4AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-07T18:08:41.241Z",
+              "DocumentIndex": 0,
+              "Title": "Modelado_Jerarquico.cpp",
+              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Modelado_Jerarquico.cpp",
+              "RelativeDocumentMoniker": "Project0a\\Modelado_Jerarquico.cpp",
+              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Modelado_Jerarquico.cpp",
+              "RelativeToolTip": "Project0a\\Modelado_Jerarquico.cpp",
+              "ViewState": "AgIAANsAAAAAAAAAAAAgwOUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T19:56:02.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "core.vs",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
+              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
               "RelativeDocumentMoniker": "Project0a\\Shader\\core.vs",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
+              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs",
               "RelativeToolTip": "Project0a\\Shader\\core.vs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-07T18:06:17.26Z",
+              "WhenOpened": "2025-03-07T19:39:28.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "core.frag",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
+              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
               "RelativeDocumentMoniker": "Project0a\\Shader\\core.frag",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
+              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.frag",
               "RelativeToolTip": "Project0a\\Shader\\core.frag",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-07T18:06:16.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Modelado_Jerarquico.cpp",
-              "DocumentMoniker": "C:\\Users\\alfon\\OneDrive - Facultad de Ingenier\u00EDa UNAM\\Ingenieria UNAM\\SEMESTRE08\\Grafica\\LABORATORIO\\Modelado Jer\u00E1rquico\\Modelado_Jerarquico.cpp",
-              "ToolTip": "C:\\Users\\alfon\\OneDrive - Facultad de Ingenier\u00EDa UNAM\\Ingenieria UNAM\\SEMESTRE08\\Grafica\\LABORATORIO\\Modelado Jer\u00E1rquico\\Modelado_Jerarquico.cpp",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAJAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-07T18:05:47.171Z",
               "EditorCaption": ""
             }
           ]
