@@ -1,8 +1,9 @@
 ﻿  Modelado_Jerarquico.cpp
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(545,20): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(546,20): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(552,32): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(558,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(559,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(587,19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  Project0a.vcxproj -> C:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(622,20): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(623,20): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(629,32): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(635,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(636,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Modelado_Jerarquico.cpp(664,19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe

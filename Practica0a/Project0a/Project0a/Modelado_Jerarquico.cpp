@@ -47,14 +47,14 @@ movZ_fig = -5.0f;
 float	hombro = 0.0f;
 float	codo = 0.0f;
 float	mano = 0.0f;
-float	dedo1 = 0.0f;
-float	falanje1 = 0.0f;
+float	dedo1 = 45.0f;
+float	falanje1 = -30.0f;
 
 float	dedo2 = 0.0f;
 float	falanje2 = 0.0f;
 
-float	dedo3 = 0.0f;
-float	falanje3 = 0.0f;
+float	dedo3 = -45.0f;
+float	falanje3 = 30.0f;
 
 int main() {
 	glfwInit();
@@ -117,47 +117,47 @@ int main() {
 
 	// use with Perspective Projection
 	float vertices[] = {
-		-0.5f, -0.5f, 0.5f, 
-		0.5f, -0.5f, 0.5f,  
-		0.5f,  0.5f, 0.5f,  
-		0.5f,  0.5f, 0.5f,  
-		-0.5f,  0.5f, 0.5f, 
-		-0.5f, -0.5f, 0.5f, 
-		
-	    -0.5f, -0.5f,-0.5f, 
-		 0.5f, -0.5f,-0.5f, 
-		 0.5f,  0.5f,-0.5f, 
-		 0.5f,  0.5f,-0.5f, 
-	    -0.5f,  0.5f,-0.5f, 
-	    -0.5f, -0.5f,-0.5f, 
-		
-		 0.5f, -0.5f,  0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f,  0.5f,
-		 0.5f,  -0.5f, 0.5f,
-      
-		-0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
-		-0.5f, -0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f,
-		
-		-0.5f, -0.5f, -0.5f,
-		0.5f, -0.5f, -0.5f, 
-		0.5f, -0.5f,  0.5f, 
-		0.5f, -0.5f,  0.5f, 
-		-0.5f, -0.5f,  0.5f,
-		-0.5f, -0.5f, -0.5f,
-		
-		-0.5f,  0.5f, -0.5f,
-		0.5f,  0.5f, -0.5f, 
-		0.5f,  0.5f,  0.5f, 
-		0.5f,  0.5f,  0.5f, 
-		-0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f, -0.5f,
+	-0.1f, -0.1f,  0.1f,
+	 0.1f, -0.1f,  0.1f,
+	 0.1f,  0.1f,  0.1f,
+	 0.1f,  0.1f,  0.1f,
+	-0.1f,  0.1f,  0.1f,
+	-0.1f, -0.1f,  0.1f,
+
+	-0.1f, -0.1f, -0.1f,
+	 0.1f, -0.1f, -0.1f,
+	 0.1f,  0.1f, -0.1f,
+	 0.1f,  0.1f, -0.1f,
+	-0.1f,  0.1f, -0.1f,
+	-0.1f, -0.1f, -0.1f,
+
+	 0.1f, -0.1f,  0.1f,
+	 0.1f, -0.1f, -0.1f,
+	 0.1f,  0.1f, -0.1f,
+	 0.1f,  0.1f, -0.1f,
+	 0.1f,  0.1f,  0.1f,
+	 0.1f, -0.1f,  0.1f,
+
+	-0.1f,  0.1f,  0.1f,
+	-0.1f,  0.1f, -0.1f,
+	-0.1f, -0.1f, -0.1f,
+	-0.1f, -0.1f, -0.1f,
+	-0.1f, -0.1f,  0.1f,
+	-0.1f,  0.1f,  0.1f,
+
+	-0.1f, -0.1f, -0.1f,
+	 0.1f, -0.1f, -0.1f,
+	 0.1f, -0.1f,  0.1f,
+	 0.1f, -0.1f,  0.1f,
+	-0.1f, -0.1f,  0.1f,
+	-0.1f, -0.1f, -0.1f,
+
+	-0.1f,  0.1f, -0.1f,
+	 0.1f,  0.1f, -0.1f,
+	 0.1f,  0.1f,  0.1f,
+	 0.1f,  0.1f,  0.1f,
+	-0.1f,  0.1f,  0.1f,
+	-0.1f,  0.1f, -0.1f,
 	};
 
 
@@ -293,7 +293,7 @@ int main() {
 
 		// Render
 		// Clear the colorbuffer
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
 
 
@@ -336,103 +336,147 @@ int main() {
 
 		glBindVertexArray(VAO);
 
-		// Model - Hombro (Shoulder)
+		////----------------------------------------------HOMBRO 1------------------//
+		// Model - Hombro (Shoulder)qq
 		model = glm::mat4(1.0f);
-		model = glm::rotate(model, glm::radians(hombro), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate shoulder
-		model = glm::translate(model, glm::vec3(1.5f, 0.0f, 0.0f)); // Move to upper arm's starting position (shoulder joint)
-		modelTemp = model; // Store shoulder transformation for elbow reference
-		model = glm::scale(model, glm::vec3(3.0f, 1.0f, 1.0f)); // Scale for upper arm
+		model = glm::translate(model, glm::vec3(-1.0f, 0.0f, 0.0f)); // Mover el centro del objeto exactamente a donde estaría el pivote.
+		model = glm::rotate(model, glm::radians(hombro), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotar
+		model = glm::translate(model, glm::vec3(0.2f, 0.0f, 0.0f)); // Desplazar unidades dependiendo a la escala, y tamaño del objeto en cuestión.
+		modelTemp = model; // Guardar referencia de matriz
+		model = glm::scale(model, glm::vec3(2.0f, 1.0f, 1.0f)); // Escalar
+		
 
-		color = glm::vec3(0.0f, 1.0f, 0.0f); // Green for upper arm
+		color = glm::vec3(0.55f, 0.55f, 0.55f); // Medium Grey 
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw upper arm
+		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw upper arme
 
+		
+
+		////----------------------------------------------CODO 1------------------//
 		// Model - Codo (Elbow)
 		model = modelTemp; // Reset to shoulder transformation
-		model = glm::translate(model, glm::vec3(1.5f, 0.0f, 0.0f)); // Move to elbow joint position (end of upper arm)
+		model = glm::translate(model, glm::vec3(0.2f, 0.0f, 0.0f)); // Move to elbow joint position (end of upper arm)
 		model = glm::rotate(model, glm::radians(codo), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate elbow
+		model = glm::translate(model, glm::vec3(0.2f, 0.0f, 0.0f)); // Move to lower arm position
 		modelTemp2 = model; // Store elbow transformation for hand reference
-		model = glm::translate(model, glm::vec3(1.0f, 0.0f, 0.0f)); // Move to lower arm position
-		model = glm::scale(model, glm::vec3(2.0f, 0.7f, 0.9f)); // Scale for lower arm
+		model = glm::scale(model, glm::vec3(2.0f, 0.75f, 0.75f)); // Scale for lower arm
 
-		color = glm::vec3(0.0f, 0.0f, 1.0f); // Blue for lower arm
+		color = glm::vec3(0.40f, 0.40f, 0.40f); // Darker Grey
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw lower arm
 
+
+		////----------------------------------------------MUÑECA 1------------------//
 		// Model - Mano (Hand)
 		model = modelTemp2; // Reset to elbow transformation
-		model = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f)); // Move to wrist position (end of lower arm)
+		model = glm::translate(model, glm::vec3(0.05f, 0.0f, 0.0f)); // Move to wrist position (end of lower arm)
 		model = glm::rotate(model, glm::radians(mano), glm::vec3(1.0f, 0.0f, 0.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.2f, 0.0f, 0.0f)); // Move to hand position
 		modelTemp3 = model; // Store elbow for tranformation
-		//model = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f)); // Move to hand position
-		model = glm::scale(model, glm::vec3(1.0f, 1.5f, 1.8f)); // Scale for hand
+		model = glm::scale(model, glm::vec3(.5f, 1.2f, 1.2f)); // Scale for hand
 
-		color = glm::vec3(0.0f, 1.0f, 1.0f); // Yellow for hand (should be distinct if needed)
+		color = glm::vec3(0.55f, 0.55f, 0.55f); // Medium Grey 
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw hand
 
-		//----------------------------------------------DEDITO 1------------------//
+		////----------------------------------------------DEDITO 1------------------//
 
 		// Model - Mano (Hand)
 		model = modelTemp3; // Reset to elbow transformation
-		model = glm::translate(model, glm::vec3(0.6f, 0.5f, 0.7f)); // Move to wrist position (end of lower arm)
+		model = glm::translate(model, glm::vec3(0.05f, 0.08f, 0.08f)); // Move to wrist position (end of lower arm)
 		model = glm::rotate(model, glm::radians(dedo1), glm::vec3(0.0f, 0.0f,1.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to hand position
 		modelTemp4 = model; // Store elbow for tranformation
-		model = glm::translate(model, glm::vec3(1.0f, 0.0f, 0.0f)); // Move to hand position
-		model = glm::scale(model, glm::vec3(2.0f, 0.3f, 0.3f)); // Scale for hand
+		model = glm::scale(model, glm::vec3(1.0f, 0.1f, 0.1f)); // Scale for hand
+		
 
-		color = glm::vec3(0.6f, 0.3f, 0.8f); // Yellow for hand (should be distinct if needed)
+		color = glm::vec3(0.70f, 0.70f, 0.70f); // Lighter Grey 
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw hand
 
-		//----------------------------------------------FALANJE 1------------------//
+		////----------------------------------------------FALANJE 1------------------//
 
 		// Model - Mano (Hand)
 		model = modelTemp4; // Reset to elbow transformation
-		model = glm::translate(model, glm::vec3(0.5f,0.0f,0.0f)); // Move to wrist position (end of lower arm)
-		model = glm::rotate(model, glm::radians(dedo1), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.1f,0.0f,0.0f)); // Move to wrist position (end of lower arm)
+		model = glm::rotate(model, glm::radians(falanje1), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to hand position
 		//modelTemp4 = model; // Store elbow for tranformation
-		model = glm::translate(model, glm::vec3(0.9f, 0.0f, 0.0f)); // Move to hand position
-		model = glm::scale(model, glm::vec3(0.8f, 0.3f, 0.3f)); // Scale for hand
+		model = glm::scale(model, glm::vec3(1.0f, 0.1f, 0.1f)); // Scale for hand
 
-		color = glm::vec3(0.4f, 0.4f, 0.4f); // Yellow for hand (should be distinct if needed)
+		color = glm::vec3(0.85f, 0.85f, 0.85f); // Lightest Grey
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw hand
 
+		////----------------------------------------------DEDITO 2------------------//
 
-		//----------------------------------------DEDITO 2----------------------//
 		// Model - Mano (Hand)
 		model = modelTemp3; // Reset to elbow transformation
-		model = glm::translate(model, glm::vec3(0.5f, -0.5f, 0.7f)); // Move to wrist position (end of lower arm)
-		model = glm::rotate(model, glm::radians(-dedo1), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate wrist
-		modelTemp6 = model; // Store elbow for tranformation
-		model = glm::translate(model, glm::vec3(0.9f, 0.0f, 0.0f)); // Move to hand position
-		model = glm::scale(model, glm::vec3(2.0f, 0.3f, 0.3f)); // Scale for hand
+		model = glm::translate(model, glm::vec3(0.05f, 0.08f, -0.08f)); // Move to wrist position (end of lower arm)
+		model = glm::rotate(model, glm::radians(dedo1), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to hand position
+		modelTemp4 = model; // Store elbow for tranformation
+		model = glm::scale(model, glm::vec3(1.0f, 0.1f, 0.1f)); // Scale for hand
 
-		color = glm::vec3(0.6f, 0.8f, 0.6f); // Yellow for hand (should be distinct if needed)
+
+		color = glm::vec3(0.70f, 0.70f, 0.70f); // Lighter Grey 
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw hand
 
-		//----------------------------------------DEDITO 3----------------------//
+		////----------------------------------------------FALANJE 2------------------//
+
+		// Model - Mano (Hand)
+		model = modelTemp4; // Reset to elbow transformation
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to wrist position (end of lower arm)
+		model = glm::rotate(model, glm::radians(falanje1), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to hand position
+		//modelTemp4 = model; // Store elbow for tranformation
+		model = glm::scale(model, glm::vec3(1.0f, 0.1f, 0.1f)); // Scale for hand
+
+		color = glm::vec3(0.85f, 0.85f, 0.85f); // Lightest Grey
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw hand
+
+
+		////----------------------------------------------DEDITO 3------------------//
+
 		// Model - Mano (Hand)
 		model = modelTemp3; // Reset to elbow transformation
-		model = glm::translate(model, glm::vec3(0.5f, 0.0f, -0.7f)); // Move to wrist position (end of lower arm)
-		model = glm::rotate(model, glm::radians(dedo1), glm::vec3(0.0f, 1.0f, 0.0f)); // Rotate wrist
-		modelTemp8 = model; // Store elbow for tranformation
-		model = glm::translate(model, glm::vec3(0.9f, 0.0f, 0.0f)); // Move to hand position
-		model = glm::scale(model, glm::vec3(2.0f, 0.3f, 0.3f)); // Scale for hand
+		model = glm::translate(model, glm::vec3(0.05f, -0.08f, 0.0f)); // Move to wrist position (end of lower arm)
+		model = glm::rotate(model, glm::radians(dedo3), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to hand position
+		modelTemp4 = model; // Store elbow for tranformation
+		model = glm::scale(model, glm::vec3(1.0f, 0.1f, 0.1f)); // Scale for hand
 
-		color = glm::vec3(0.6f, 0.8f, 0.6f); // Yellow for hand (should be distinct if needed)
+
+		color = glm::vec3(0.70f, 0.70f, 0.70f); // Lighter Grey
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw hand
 
+		////----------------------------------------------FALANJE 3------------------//
+
+		// Model - Mano (Hand)
+		model = modelTemp4; // Reset to elbow transformation
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to wrist position (end of lower arm)
+		model = glm::rotate(model, glm::radians(falanje3), glm::vec3(0.0f, 0.0f, 1.0f)); // Rotate wrist
+		model = glm::translate(model, glm::vec3(0.1f, 0.0f, 0.0f)); // Move to hand position
+		//modelTemp4 = model; // Store elbow for tranformation
+		model = glm::scale(model, glm::vec3(1.0f, 0.1f, 0.1f)); // Scale for hand
+
+		color = glm::vec3(0.85f, 0.85f, 0.85f); // Lightest Grey 
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36); // Draw hand
+
+		
 
 
 
@@ -442,10 +486,26 @@ int main() {
 		glm::mat4 axisModel = glm::mat4(1.0f); // Matriz de modelo sin rotación
 		glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(axisModel));
 
+		//R
+			//A
+			//V
 		// Dibujar los ejes
 		glBindVertexArray(axisVAO);
-		glDrawArrays(GL_LINES, 0, 6); // 6 vértices para los 3 ejes
+		color = glm::vec3(1.0f, 0.0f, 0.0f); //ROJO
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glDrawArrays(GL_LINES, 0, 2); // 6 vértices para los 3 ejes
+
+		color = glm::vec3(0.0f, 0.0f, 1.0f); // BLUE
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glDrawArrays(GL_LINES, 2, 2); // 6 vértices para los 3 ejes
+
+		color = glm::vec3(0.0f, 1.0f, 0.0f); // GREEN
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glDrawArrays(GL_LINES, 4, 2); // 6 vértices para los 3 ejes
+
 		glBindVertexArray(0);
+
+
 
 
 		// Dibujar LA RETICULA
@@ -453,6 +513,10 @@ int main() {
 		glm::mat4 gridModel = glm::mat4(1.0f); // Matriz de modelo para la retícula (sin transformación)
 		glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(gridModel));
 		glBindVertexArray(gridVAO);
+
+		
+		color = glm::vec3(0.75f, 0.75f, 0.75f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glDrawArrays(GL_LINES, 0, gridVertices.size() / 6); // Dibujar líneas
 		glBindVertexArray(0);
 
@@ -490,30 +554,43 @@ int main() {
 	 
 	 
 	 if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
-		 hombro -= 0.18f;
+		 hombro += 1.212f;
 	 if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-		 hombro += 0.18f;
+		 hombro -= 1.212f;
 	
 	 if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-		 codo -= 0.18f;
+		 codo += 1.212f;
 	 if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-		 codo += 0.18f;
+		 codo -= 1.212f;
 
 
 	 if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
-		 mano -= 0.18f;
+		 mano += 1.212f;
 	 if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-		 mano += 0.18f;
+		 mano -= 1.212f;
 
 
-	 if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
-		 dedo1 -= 0.18f;
-	 dedo2 -= 0.18f;
-		 falanje1 += 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS)
-		 dedo1 += 0.18f;
-	 dedo2 += 0.18f;
-		 falanje1 -= 0.18f;
+	 if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
+
+		 dedo1 -= 1.212f;
+		 falanje1 -= 1.212f;
+
+		 dedo2 -= 1.212f;
+		 falanje2 -= 1.212f;
+		 dedo3 += 1.212f;
+		 falanje3 += 1.212f;
+	 }
+
+	 if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
+		 dedo1 += 1.212f;
+		 falanje1 += 1.212f;
+
+		 dedo2 += 1.212f;
+		 falanje2 += 1.212f;
+		 dedo3 -= 1.212f;
+		 falanje3 -= 1.212f;
+	 }
+
 
 
 	 if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
