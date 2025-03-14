@@ -32,6 +32,8 @@ void DoMovement( );
 
 
 // Camera
+
+//Como vamos a ir generando los movimientos
 Camera camera( glm::vec3( 0.0f, 0.0f, 3.0f ) );
 bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
@@ -94,6 +96,7 @@ int main( )
     Shader shader( "Shader/modelLoading.vs", "Shader/modelLoading.frag" );
     
     // Load models
+	Model dog((char*)"Models/RedDog.obj");
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
     
   
@@ -121,9 +124,16 @@ int main( )
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 
         // Draw the loaded model
-        glm::mat4 model(1);
-        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         
+        glm::mat4 model(1);
+        //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+		//dog.Draw(shader);
+        model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(2.5f, 2.5f, 2.5f)); 
+
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        dog.Draw(shader);
+
 
         // Swap the buffers
         glfwSwapBuffers( window );
