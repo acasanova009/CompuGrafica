@@ -96,7 +96,8 @@ int main( )
     Shader shader( "Shader/modelLoading.vs", "Shader/modelLoading.frag" );
     
     // Load models
-	Model dog((char*)"Models/RedDog.obj");
+	//Model dog((char*)"Models/78954/78954/78954.obj");
+    Model dog((char*)"Models/RedDog.obj");
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
     
   
@@ -128,8 +129,8 @@ int main( )
         glm::mat4 model(1);
         //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 		//dog.Draw(shader);
-        model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(2.5f, 2.5f, 2.5f)); 
+        model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); 
 
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         dog.Draw(shader);
@@ -198,19 +199,19 @@ void KeyCallback( GLFWwindow *window, int key, int scancode, int action, int mod
 
 void MouseCallback( GLFWwindow *window, double xPos, double yPos )
 {
-    if ( firstMouse )
-    {
-        lastX = xPos;
-        lastY = yPos;
-        firstMouse = false;
-    }
-    
-    GLfloat xOffset = xPos - lastX;
-    GLfloat yOffset = lastY - yPos;  // Reversed since y-coordinates go from bottom to left
-    
-    lastX = xPos;
-    lastY = yPos;
-    
-    camera.ProcessMouseMovement( xOffset, yOffset );
+    //if ( firstMouse )
+    //{
+    //    lastX = xPos;
+    //    lastY = yPos;
+    //    firstMouse = false;
+    //}
+    //
+    //GLfloat xOffset = xPos - lastX;
+    //GLfloat yOffset = lastY - yPos;  // Reversed since y-coordinates go from bottom to left
+    //
+    //lastX = xPos;
+    //lastY = yPos;
+    //
+    //camera.ProcessMouseMovement( xOffset, yOffset );
 }
 

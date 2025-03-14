@@ -1,9 +1,3 @@
 ﻿  Carga de Modelos.cpp
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(108,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(203,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(204,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(208,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(209,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(211,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(212,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-  Project0a.vcxproj -> C:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(109,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
