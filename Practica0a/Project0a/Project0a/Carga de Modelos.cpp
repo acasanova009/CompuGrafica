@@ -97,7 +97,7 @@ int main( )
     
     // Load models
 	//Model dog((char*)"Models/78954/78954/78954.obj");
-    Model dog((char*)"Models/RedDog.obj");
+    Model dog((char*)"Models/Lego/lego.obj");
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
     
   
@@ -199,19 +199,19 @@ void KeyCallback( GLFWwindow *window, int key, int scancode, int action, int mod
 
 void MouseCallback( GLFWwindow *window, double xPos, double yPos )
 {
-    //if ( firstMouse )
-    //{
-    //    lastX = xPos;
-    //    lastY = yPos;
-    //    firstMouse = false;
-    //}
-    //
-    //GLfloat xOffset = xPos - lastX;
-    //GLfloat yOffset = lastY - yPos;  // Reversed since y-coordinates go from bottom to left
-    //
-    //lastX = xPos;
-    //lastY = yPos;
-    //
-    //camera.ProcessMouseMovement( xOffset, yOffset );
+    if ( firstMouse )
+    {
+        lastX = xPos;
+        lastY = yPos;
+        firstMouse = false;
+    }
+    
+    GLfloat xOffset = xPos - lastX;
+    GLfloat yOffset = lastY - yPos;  // Reversed since y-coordinates go from bottom to left
+    
+    lastX = xPos;
+    lastY = yPos;
+    
+    camera.ProcessMouseMovement( xOffset, yOffset );
 }
 
