@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Modelado_Jerarquico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Modelado_Jerarquico.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\core.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Modelado_Jerarquico.cpp",
-              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Modelado_Jerarquico.cpp",
-              "RelativeDocumentMoniker": "Project0a\\Modelado_Jerarquico.cpp",
-              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Modelado_Jerarquico.cpp",
-              "RelativeToolTip": "Project0a\\Modelado_Jerarquico.cpp",
-              "ViewState": "AgIAACUBAAAAAAAAAAAAACsBAAACAAAAAAAAAA==",
+              "Title": "Carga de Modelos.cpp",
+              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
+              "RelativeDocumentMoniker": "Project0a\\Carga de Modelos.cpp",
+              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
+              "RelativeToolTip": "Project0a\\Carga de Modelos.cpp",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAAALAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-07T19:56:02.307Z",
+              "WhenOpened": "2025-03-14T19:53:06.328Z",
               "EditorCaption": ""
             },
             {
@@ -51,7 +51,8 @@
               "RelativeToolTip": "Project0a\\Shader\\core.vs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-07T19:39:28.276Z"
+              "WhenOpened": "2025-03-07T19:39:28.276Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
