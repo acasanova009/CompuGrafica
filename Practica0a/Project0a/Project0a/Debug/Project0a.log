@@ -1,10 +1,8 @@
 ﻿  Carga de Modelos.cpp
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(109,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(204,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(205,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(209,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(210,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(212,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(213,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-soil2-debug.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_DXT.obj)' or at ''; linking object as if no debug info
-  Project0a.vcxproj -> C:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(373,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(374,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(380,37): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(386,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(387,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(415,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe

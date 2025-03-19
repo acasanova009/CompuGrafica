@@ -22,25 +22,50 @@
 #include "stb_image.h"
 
 // Properties
-const GLuint WIDTH = 800, HEIGHT = 600;
-int SCREEN_WIDTH, SCREEN_HEIGHT;
+const GLint WIDTH = 1200, HEIGHT = 800;
+int screenWidth, screenHeight;
 
 // Function prototypes
-void KeyCallback( GLFWwindow *window, int key, int scancode, int action, int mode );
-void MouseCallback( GLFWwindow *window, double xPos, double yPos );
-void DoMovement( );
+
+// AGREGAR 1.0
+void Inputs(GLFWwindow* window);
+void MouseCallback(GLFWwindow* window, double xpos, double ypos);
+void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods);
+void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset);
+
+float movX = 0.0f;
+float movY = 0.0f;
+float movZ = -5.0f;
+float roty = 0.0f;
+float rotx = 0.0f;
+float rotz = 0.0f;
+
+bool ctrlPressed = false; // Track if Ctrl is pressed
+bool rightMousePressed = false; // Track if right mouse button is pressed
+bool leftMousePressed = false; // Track if right mouse button is pressed
+double lastX = WIDTH / 2.0; // Last X position of the mouse
+double lastY = HEIGHT / 2.0; // Last Y position of the mouse
+double lastZ = WIDTH / 2.0; // Last Y position of the mouse
+
+//For Keyboard
+float	movX_fig = 0.0f,
+movY_fig = 0.0f,
+movZ_fig = -5.0f;
+
+//AGREGAR 1.1
+
 
 
 // Camera
 
-//Como vamos a ir generando los movimientos
-Camera camera( glm::vec3( 0.0f, 0.0f, 3.0f ) );
-bool keys[1024];
-GLfloat lastX = 400, lastY = 300;
-bool firstMouse = true;
-
-GLfloat deltaTime = 0.0f;
-GLfloat lastFrame = 0.0f;
+////Como vamos a ir generando los movimientos
+//Camera camera( glm::vec3( 0.0f, 0.0f, 3.0f ) );
+//bool keys[1024];
+//GLfloat lastX = 400, lastY = 300;
+//bool firstMouse = true;
+//
+//GLfloat deltaTime = 0.0f;
+//GLfloat lastFrame = 0.0f;
 
 
 
@@ -68,12 +93,19 @@ int main( )
     
     glfwMakeContextCurrent( window );
     
-    glfwGetFramebufferSize( window, &SCREEN_WIDTH, &SCREEN_HEIGHT );
+    glfwGetFramebufferSize( window, &screenWidth, &screenHeight);
+
+
+
+
     
     // Set the required callback functions
-    glfwSetKeyCallback( window, KeyCallback );
-    glfwSetCursorPosCallback( window, MouseCallback );
-    
+    //glfwSetKeyCallback( window, KeyCallback );
+ 
+ 
+
+
+
     // GLFW Options
     //glfwSetInputMode( window, GLFW_CURSOR, GLFW_CURSOR_DISABLED );
     
@@ -87,7 +119,7 @@ int main( )
     }
     
     // Define the viewport dimensions
-    glViewport( 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT );
+    glViewport( 0, 0, screenWidth, screenHeight);
     
     // OpenGL options
     glEnable( GL_DEPTH_TEST );
@@ -96,31 +128,136 @@ int main( )
     Shader shader( "Shader/modelLoading.vs", "Shader/modelLoading.frag" );
     
     // Load models
-	//Model dog((char*)"Models/78954/78954/78954.obj");
-    Model dog((char*)"Models/Lego/lego.obj");
-    glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
-    
-  
+	Model dog((char*)"Models/RedDog.obj");
+    //Model dog((char*)"Models/Lego/lego.obj");
+    glm::mat4 projection = glm::mat4(1);
+
+    projection = glm::perspective(glm::radians(45.0f), (GLfloat)screenWidth / (GLfloat)screenHeight, 0.1f, 100.0f);//FOV, Radio de aspecto,znear,zfar
+    glm::vec3 color = glm::vec3(0.0f, 0.0f, 1.0f);
+
+
+
+    // Agregar 2.0
+   //----------------------------------------------INICIO RETICULA Y EJES.--------------
+   // 
+
+    float axisVertices[] = {
+        // Ejes coordenados
+        0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // Origen a X (rojo)
+        1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,
+        0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, // Origen a Y (azul)
+        0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+        0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, // Origen a Z (verde)
+        0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
+    };
+
+
+    // Crear un VAO y un VBO para los ejes
+    GLuint axisVBO, axisVAO;
+    glGenVertexArrays(1, &axisVAO);
+    glGenBuffers(1, &axisVBO);
+
+    // Vincular el VAO y el VBO para los ejes
+    glBindVertexArray(axisVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, axisVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(axisVertices), axisVertices, GL_STATIC_DRAW);
+
+    // Configurar el atributo de posición para los ejes
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
+    glEnableVertexAttribArray(0);
+
+    // Configurar el atributo de color para los ejes
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
+    glEnableVertexAttribArray(1);
+
+    // Desvincular el VBO y el VAO
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+
+
+    //Inicio de la retícula--------------
+    // Definir los vértices de la retícula (una cuadrícula en el plano XZ)
+    std::vector<float> gridVertices;
+    float gridSize = 1.0f;       // Tamaño de la retícula (de -1 a 1 en X y Z)
+    float gridStep = 0.0999f;    // Separación entre líneas
+    float gridColor = 0.7f;      // Color gris para la retícula
+
+    // Líneas paralelas al eje X
+    for (float z = -gridSize; z <= gridSize; z += gridStep) {
+        gridVertices.push_back(-gridSize); gridVertices.push_back(0.0f); gridVertices.push_back(z);
+        gridVertices.push_back(gridColor); gridVertices.push_back(gridColor); gridVertices.push_back(gridColor);
+        gridVertices.push_back(gridSize); gridVertices.push_back(0.0f); gridVertices.push_back(z);
+        gridVertices.push_back(gridColor); gridVertices.push_back(gridColor); gridVertices.push_back(gridColor);
+    }
+
+    // Líneas paralelas al eje Z
+    for (float x = -gridSize; x <= gridSize; x += gridStep) {
+        gridVertices.push_back(x); gridVertices.push_back(0.0f); gridVertices.push_back(-gridSize);
+        gridVertices.push_back(gridColor); gridVertices.push_back(gridColor); gridVertices.push_back(gridColor);
+        gridVertices.push_back(x); gridVertices.push_back(0.0f); gridVertices.push_back(gridSize);
+        gridVertices.push_back(gridColor); gridVertices.push_back(gridColor); gridVertices.push_back(gridColor);
+    }
+
+    // Crear un VAO y un VBO para la retícula
+    GLuint gridVBO, gridVAO;
+    glGenVertexArrays(1, &gridVAO);
+    glGenBuffers(1, &gridVBO);
+
+    // Vincular el VAO y el VBO para la retícula
+    glBindVertexArray(gridVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, gridVBO);
+    glBufferData(GL_ARRAY_BUFFER, gridVertices.size() * sizeof(float), gridVertices.data(), GL_STATIC_DRAW);
+
+    // Configurar el atributo de posición para la retícula
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    // Configurar el atributo de color para la retícula
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    // Desvincular el VBO y el VAO
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+    // 2.2--------------------------------------------------- Final de la retícula Y EJES--------------
+
+
+
+    // 3.0 Agregar call backs.
+    glfwSetCursorPosCallback(window, MouseCallback);
+    glfwSetScrollCallback(window, ScrollCallback);
+    glfwSetMouseButtonCallback(window, MouseButtonCallback);
+    // 3.3 
+
 
     // Game loop
     while (!glfwWindowShouldClose(window))
     {
-        // Set frame time
-        GLfloat currentFrame = glfwGetTime();
-        deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
+        // 4.0 Agregar
+        Inputs(window);
+        // 4.4 Fin
+
+        
 
         // Check and call events
         glfwPollEvents();
-        DoMovement();
+        //DoMovement();
 
-        // Clear the colorbuffer
-        glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+        // 5.0 Agregar 
+        glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        // 5.5 Fin
 
         shader.Use();
 
-        glm::mat4 view = camera.GetViewMatrix();
+        glm::mat4 view = glm::mat4(1);
+
+        // 6.0 Agregar
+        view = glm::translate(view, glm::vec3(movX, movY, movZ + 1.0f));
+        view = glm::rotate(view, glm::radians(roty + -40.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        view = glm::rotate(view, glm::radians(-rotx + 30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        view = glm::rotate(view, glm::radians(rotz + -20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+        // 6.0
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 
@@ -132,86 +269,150 @@ int main( )
         model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
         model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); 
 
+
+
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         dog.Draw(shader);
+
+
+        // Agregar 7.0
+       //-------------------------DIUBJAR EJES Y RETICULA
+       // Dibujar los ejes sin rotación (matriz de modelo identidad)
+        glm::mat4 axisModel = glm::mat4(1.0f); // Matriz de modelo sin rotación
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(axisModel));
+
+        //R
+            //A
+            //V
+        // Dibujar los ejes
+        glBindVertexArray(axisVAO);
+        color = glm::vec3(1.0f, 0.0f, 0.0f); //ROJO
+        glUniform3fv(shader.getColorLocation(), 1, glm::value_ptr(color));
+        glDrawArrays(GL_LINES, 0, 2); // 6 vértices para los 3 ejes
+
+        color = glm::vec3(0.0f, 0.0f, 1.0f); // BLUE
+        glUniform3fv(shader.getColorLocation(), 1, glm::value_ptr(color));
+        glDrawArrays(GL_LINES, 2, 2); // 6 vértices para los 3 ejes
+
+        color = glm::vec3(0.0f, 1.0f, 0.0f); // GREEN
+        glUniform3fv(shader.getColorLocation(), 1, glm::value_ptr(color));
+        glDrawArrays(GL_LINES, 4, 2); // 6 vértices para los 3 ejes
+
+        glBindVertexArray(0);
+
+
+
+
+        // Dibujar LA RETICULA
+
+        glm::mat4 gridModel = glm::mat4(1.0f); // Matriz de modelo para la retícula (sin transformación)
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(gridModel));
+        glBindVertexArray(gridVAO);
+
+
+        color = glm::vec3(0.75f, 0.75f, 0.75f);
+        glUniform3fv(shader.getColorLocation(), 1, glm::value_ptr(color));
+        glDrawArrays(GL_LINES, 0, gridVertices.size() / 6); // Dibujar líneas
+        glBindVertexArray(0);
+
+
+        //-------------------------------FIN  EJES Y RETICULA
+         // Fin  7.7
+
 
 
         // Swap the buffers
         glfwSwapBuffers( window );
     }
+
+
+    // Agregar 8.0
+    glDeleteVertexArrays(1, &axisVAO);
+    glDeleteBuffers(1, &axisVBO);
+    glDeleteVertexArrays(1, &gridVAO);
+    glDeleteBuffers(1, &gridVAO);
+    // Fin 8.8
     
     glfwTerminate( );
     return 0;
 }
 
 
-// Moves/alters the camera positions based on user input
-void DoMovement( )
-{
-    // Camera controls
-    if ( keys[GLFW_KEY_W] || keys[GLFW_KEY_UP] )
-    {
-        camera.ProcessKeyboard( FORWARD, deltaTime );
-    }
-    
-    if ( keys[GLFW_KEY_S] || keys[GLFW_KEY_DOWN] )
-    {
-        camera.ProcessKeyboard( BACKWARD, deltaTime );
-    }
-    
-    if ( keys[GLFW_KEY_A] || keys[GLFW_KEY_LEFT] )
-    {
-        camera.ProcessKeyboard( LEFT, deltaTime );
-    }
-    
-    if ( keys[GLFW_KEY_D] || keys[GLFW_KEY_RIGHT] )
-    {
-        camera.ProcessKeyboard( RIGHT, deltaTime );
-    }
+//Agregar 9.0
+void Inputs(GLFWwindow* window) {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)  //GLFW_RELEASE
+        glfwSetWindowShouldClose(window, true);
 
-   
+
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+
+    // Track Ctrl key state
+    if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_RIGHT_CONTROL) == GLFW_PRESS)
+        ctrlPressed = true;
+    else
+        ctrlPressed = false;
 }
 
-// Is called whenever a key is pressed/released via GLFW
-void KeyCallback( GLFWwindow *window, int key, int scancode, int action, int mode )
-{
-    if ( GLFW_KEY_ESCAPE == key && GLFW_PRESS == action )
-    {
-        glfwSetWindowShouldClose(window, GL_TRUE);
+
+
+void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
+    double xoffset = xpos - lastX;
+    double yoffset = lastY - ypos; // Reversed since y-coordinates go from bottom to top
+
+    lastX = xpos;
+    lastY = ypos;
+
+    float sensitivity = 0.5f; // Adjust sensitivity as needed
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+    if (ctrlPressed && rightMousePressed) {
+
+
+        // Rotate around Z axis (Ctrl + Left Click)
+        movX += xoffset / 100.0f; // Adjust the factor as needed
+        movY += yoffset / 100.0f; // Adjust the factor as needed
+        //std::cout << "Ctrl + Left Click: rotz = " << rotz << std::endl;
+
     }
-    
-    if ( key >= 0 && key < 1024 )
-    {
-        if ( action == GLFW_PRESS )
-        {
-            keys[key] = true;
+    if (ctrlPressed && leftMousePressed) {
+        // Rotate around Z axis (Ctrl + Left Click)
+        rotz += (xoffset + yoffset) * 0.5f; // Adjust the factor as needed
+        //std::cout << "Ctrl + Left Click: rotz = " << rotz << std::endl;
+    }
+
+    if (leftMousePressed && !ctrlPressed) {
+        // Rotate around X and Y axes (Ctrl + Right Click)
+        rotx += yoffset; // Rotate around the X-axis (vertical movement)
+        roty += xoffset; // Rotate around the Y-axis (horizontal movement)
+        // std::cout << "Ctrl + Right Click: rotx = " << rotx << ", roty = " << roty << std::endl;
+
+    }
+
+}
+void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
+    if (button == GLFW_MOUSE_BUTTON_RIGHT) {
+        if (action == GLFW_PRESS) {
+
+
+            rightMousePressed = true;
         }
-        else if ( action == GLFW_RELEASE )
-        {
-            keys[key] = false;
+        else if (action == GLFW_RELEASE)
+            rightMousePressed = false;
+    }
+    if (button == GLFW_MOUSE_BUTTON_LEFT) {
+        if (action == GLFW_PRESS) {
+
+
+            leftMousePressed = true;
         }
+        else if (action == GLFW_RELEASE)
+            leftMousePressed = false;
     }
-
- 
-
- 
 }
 
-void MouseCallback( GLFWwindow *window, double xPos, double yPos )
-{
-    if ( firstMouse )
-    {
-        lastX = xPos;
-        lastY = yPos;
-        firstMouse = false;
-    }
-    
-    GLfloat xOffset = xPos - lastX;
-    GLfloat yOffset = lastY - yPos;  // Reversed since y-coordinates go from bottom to left
-    
-    lastX = xPos;
-    lastY = yPos;
-    
-    camera.ProcessMouseMovement( xOffset, yOffset );
+void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
+    movZ += yoffset * 0.5f; // Adjust the zoom speed as needed
 }
 
+//Fin 9.9

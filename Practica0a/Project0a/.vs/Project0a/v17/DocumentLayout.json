@@ -1,17 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\CompuGrafica\\Practica0a\\Project0a\\",
+  "WorkspaceRootPath": "D:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\COMPUGRAFICA\\PRACTICA0A\\PROJECT0A\\EXTERNAL LIBRARIES\\ASSIMP\\INCLUDE\\ASSIMP\\ANIM.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:EXTERNAL LIBRARIES\\ASSIMP\\INCLUDE\\ASSIMP\\ANIM.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\stb_image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\stb_image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\stb_image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,23 +38,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Model.h",
-              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Model.h",
-              "RelativeDocumentMoniker": "Project0a\\Model.h",
-              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Model.h",
-              "RelativeToolTip": "Project0a\\Model.h",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Shader.h",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
+              "RelativeDocumentMoniker": "Project0a\\Shader.h",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader.h",
+              "RelativeToolTip": "Project0a\\Shader.h",
+              "ViewState": "AgIAAFYAAAAAAAAAAIAwwGUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-14T21:51:56.85Z"
+              "WhenOpened": "2025-03-19T19:57:54.161Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "anim.h",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\External Libraries\\assimp\\include\\assimp\\anim.h",
+              "RelativeDocumentMoniker": "External Libraries\\assimp\\include\\assimp\\anim.h",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\External Libraries\\assimp\\include\\assimp\\anim.h",
+              "RelativeToolTip": "External Libraries\\assimp\\include\\assimp\\anim.h",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAuwKMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-19T19:50:16.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Model.h",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Model.h",
+              "RelativeDocumentMoniker": "Project0a\\Model.h",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Model.h",
+              "RelativeToolTip": "Project0a\\Model.h",
+              "ViewState": "AgIAAF8AAAAAAAAAAIAwwGUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T21:51:56.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "stb_image.h",
-              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\stb_image.h",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\stb_image.h",
               "RelativeDocumentMoniker": "Project0a\\stb_image.h",
-              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\stb_image.h",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\stb_image.h",
               "RelativeToolTip": "Project0a\\stb_image.h",
               "ViewState": "AgIAABIDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -54,13 +89,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Carga de Modelos.cpp",
-              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
               "RelativeDocumentMoniker": "Project0a\\Carga de Modelos.cpp",
-              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
               "RelativeToolTip": "Project0a\\Carga de Modelos.cpp",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAAAMkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAABEBAAAAAAAAAAAAACEBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-14T19:53:06.328Z",
               "EditorCaption": ""
