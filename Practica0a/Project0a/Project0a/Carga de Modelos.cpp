@@ -128,11 +128,11 @@ int main( )
     Shader shader( "Shader/modelLoading.vs", "Shader/modelLoading.frag" );
     
     // Load models
-	Model dog((char*)"Models/RedDog.obj");
-    //Model dog((char*)"Models/Lego/lego.obj");
+	//Model dog((char*)"Models/RedDog.obj");
+    Model dog((char*)"Models/Tiny2/Tiny2.obj");
     glm::mat4 projection = glm::mat4(1);
 
-    projection = glm::perspective(glm::radians(45.0f), (GLfloat)screenWidth / (GLfloat)screenHeight, 0.1f, 100.0f);//FOV, Radio de aspecto,znear,zfar
+    projection = glm::perspective(glm::radians(45.0f), (GLfloat)screenWidth / (GLfloat)screenHeight, 0.01f, 100000.0f);//FOV, Radio de aspecto,znear,zfar
     glm::vec3 color = glm::vec3(0.0f, 0.0f, 1.0f);
 
 
@@ -250,9 +250,9 @@ int main( )
 
         shader.Use();
 
-        glm::mat4 view = glm::mat4(1);
 
         // 6.0 Agregar
+        glm::mat4 view = glm::mat4(1);
         view = glm::translate(view, glm::vec3(movX, movY, movZ + 1.0f));
         view = glm::rotate(view, glm::radians(roty + -40.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         view = glm::rotate(view, glm::radians(-rotx + 30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
@@ -267,7 +267,7 @@ int main( )
         //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 		//dog.Draw(shader);
         model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f)); 
+        model = glm::scale(model, glm::vec3(0.01f, 0.01f, 0.01f)); 
 
 
 
@@ -310,7 +310,8 @@ int main( )
         glBindVertexArray(gridVAO);
 
 
-        color = glm::vec3(0.75f, 0.75f, 0.75f);
+        //color = glm::vec3(0.75f, 0.75f, 0.75f);
+        color = glm::vec3(.1f, .1f, .10f);
         glUniform3fv(shader.getColorLocation(), 1, glm::value_ptr(color));
         glDrawArrays(GL_LINES, 0, gridVertices.size() / 6); // Dibujar líneas
         glBindVertexArray(0);
