@@ -129,10 +129,10 @@ int main( )
     
     // Load models
 	//Model dog((char*)"Models/RedDog.obj");
-    Model dog((char*)"Models/Tiny2/Tiny2.obj");
+    Model dog((char*)"Models/Gun.obj");
     glm::mat4 projection = glm::mat4(1);
 
-    projection = glm::perspective(glm::radians(45.0f), (GLfloat)screenWidth / (GLfloat)screenHeight, 0.01f, 100000.0f);//FOV, Radio de aspecto,znear,zfar
+    projection = glm::perspective(glm::radians(45.0f), (GLfloat)screenWidth / (GLfloat)screenHeight, 0.01f, 1000000.0f);//FOV, Radio de aspecto,znear,zfar
     glm::vec3 color = glm::vec3(0.0f, 0.0f, 1.0f);
 
 
@@ -266,8 +266,8 @@ int main( )
         glm::mat4 model(1);
         //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 		//dog.Draw(shader);
-        model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(0.01f, 0.01f, 0.01f)); 
+        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(1.1f, 1.1f, 1.1f)); 
 
 
 
