@@ -106,13 +106,23 @@ int main()
 		0.5f,  0.5f, 0.0f,     1.0f, 1.0f,1.0f,	    1.0f,1.0f,
 		-0.5f,  0.5f, 0.0f,    1.0f, 1.0f,1.0f,		0.0f,1.0f,
 
-		
+
 	};
+
+		//-0.5f,  0.5f, 0.0f,    1.0f, 1.0f,1.0f,		 1.0f,1.0f,//INICIO
+		//-1.0f,  0.5f, 0.0f,    1.0f, 1.0f,1.0f,		0.5f,1.0f, //TERMINA
+		//-0.5f, -0.5f, 0.0f,    1.0f, 1.0f,1.0f,		1.0f,0.0f, //INICIO 
+
+
+
+		
+	//};
 
 	GLuint indices[] =
 	{  // Note that we start from 0!
 		0,1,3,
-		1,2,3
+		1,2,3,
+		//4, 5, 6
 	
 	};
 
@@ -147,18 +157,21 @@ int main()
 	int textureWidth, textureHeight,nrChannels;
 	stbi_set_flip_vertically_on_load(true);
 	unsigned char *image;
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	//GL_NEAREST_MIPMAP_NEAREST
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 	// Diffuse map
-	image = stbi_load("images/checker_Tex.png", &textureWidth, &textureHeight, &nrChannels,0);
+	image = stbi_load("images/window.png", &textureWidth, &textureHeight, &nrChannels,0);
 	glBindTexture(GL_TEXTURE_2D, texture1);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, textureWidth, textureHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, textureWidth, textureHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
 	glGenerateMipmap(GL_TEXTURE_2D);
+
+
 	if (image)
 	{
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, textureWidth, textureHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, textureWidth, textureHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
 		glGenerateMipmap(GL_TEXTURE_2D);
 	}
 	else
