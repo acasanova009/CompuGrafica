@@ -1,8 +1,14 @@
-﻿  Carga de Modelos.cpp
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(374,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(375,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(381,37): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(387,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(388,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(416,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
+﻿  Texturizado.cpp
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Texturizado.cpp(176,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Texturizado.cpp(276,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Texturizado.cpp(277,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Texturizado.cpp(281,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Texturizado.cpp(282,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Texturizado.cpp(284,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Texturizado.cpp(285,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+soil2-debug.lib(etc1_utils.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(etc1_utils.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_DXT.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_helper.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_helper.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(SOIL2.obj)' or at ''; linking object as if no debug info
+  Project0a.vcxproj -> C:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
