@@ -230,6 +230,11 @@ int main()
         // Specular light: highlights
         glUniform3f(glGetUniformLocation(lightingShader.Program, "light.specular"), 1.0f, 1.0f, 1.0f);
 
+        // Segunda luz: luz fría desde otro ángulo
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "light2.ambient"), 0.1f, 0.1f, 0.2f);  // luz azulada tenue
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "light2.diffuse"), 0.4f, 0.4f, 0.8f);  // luz
+
+
 
 
         glm::mat4 view = camera.GetViewMatrix();

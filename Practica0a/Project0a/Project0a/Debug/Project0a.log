@@ -1,9 +1,14 @@
 ﻿  Iluminacion.cpp
 C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(203,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(376,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(377,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(381,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(382,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(384,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(385,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(381,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(382,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(386,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(387,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(389,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\CompuGrafica\Practica0a\Project0a\Project0a\Iluminacion.cpp(390,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+soil2-debug.lib(etc1_utils.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(etc1_utils.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_DXT.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_helper.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_helper.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(SOIL2.obj)' or at ''; linking object as if no debug info
   Project0a.vcxproj -> C:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
