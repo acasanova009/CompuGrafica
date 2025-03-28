@@ -221,14 +221,23 @@ int main()
 
 
         // Set lights properties
-        // Ambient light: low intensity
+      
+        // Establecer las propiedades de la luz
+
+        // Luz ambiental: representa la iluminación indirecta uniforme en la escena.
+        // Valores típicos: entre 0.1 y 0.3 para simular una luz tenue y evitar sombras completamente negras.
         glUniform3f(glGetUniformLocation(lightingShader.Program, "light.ambient"), 0.2f, 0.2f, 0.2f);
 
-        // Diffuse light: main light color
+        // Luz difusa: define el color principal de la luz que incide directamente sobre las superficies.
+        // Valores comunes: entre 0.4 y 0.8, dependiendo de la intensidad deseada y el tipo de material iluminado.
         glUniform3f(glGetUniformLocation(lightingShader.Program, "light.diffuse"), 0.5f, 0.5f, 0.5f);
 
-        // Specular light: highlights
+        // Luz especular: controla los reflejos brillantes sobre superficies pulidas.
+        // Normalmente se usa un valor alto (cercano a 1.0) para simular reflejos nítidos y brillantes.
         glUniform3f(glGetUniformLocation(lightingShader.Program, "light.specular"), 1.0f, 1.0f, 1.0f);
+
+
+
 
         // Segunda luz: luz fría desde otro ángulo
         glUniform3f(glGetUniformLocation(lightingShader.Program, "light2.ambient"), 0.1f, 0.1f, 0.2f);  // luz azulada tenue
@@ -245,37 +254,48 @@ int main()
         
 
        // Material ambient: base color under ambient light
+       // Material ambient: color base del material bajo luz ambiental.
+
+       
+       // Este color suele ser similar al color difuso, pero con menor intensidad.
+        // Valores típicos: entre 0.1 y 0.4 por canal para simular un efecto suave y uniforme.
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 1.0f, 0.5f, 0.31f);
 
-        // Material diffuse: main color of the object when lit
+        // Material diffuse: color principal del objeto al recibir luz directa (difusa).
+        // Suele representar el color visible del objeto bajo iluminación normal.
+        // Valores entre 0.5 y 1.0 por canal son comunes para materiales brillantes o saturados.
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 1.0f, 0.5f, 0.31f);
 
-        // Material specular: reflected light for highlights (white for plastic/metal)
+        // Material specular: color de los reflejos especulares (brillos).
+        // Blanco (1.0, 1.0, 1.0) se usa para materiales reflectantes como metal o plástico brillante.
+        // Valores menores (0.1 a 0.6) simulan materiales más opacos o menos reflectantes.
         glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.5f, 0.5f, 0.5f);
 
-        // Material shininess: higher = smaller, sharper highlights (32–128 typical)
+        // Material shininess: controla el tamaño e intensidad del reflejo especular.
+        // Un valor bajo (~5–32) genera brillos amplios y difusos, mientras que uno alto (~64–128+) 
+        // produce reflejos pequeños y definidos.
+        // Valores comunes: 16 para plástico, 32 para madera barnizada, 128 para metal pulido.
         glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 5.0f);
 
-
         // Draw the loaded model
-        //glm::mat4 model(1);
-        //model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
-        //glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        //glBindVertexArray(VAO);
-       
-        //glDrawArrays(GL_TRIANGLES, 0, 36);
-
-
-        // Draw the loaded model
-
         glm::mat4 model(1);
+        model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO);
+       
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
+        // Draw the loaded model
+
+        //glm::mat4 model(1);
+        ////glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        ////dog.Draw(shader);
+        //model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f));
+        //model = glm::scale(model, glm::vec3(2.5f, 2.5f, 2.5f));
+
         //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         //dog.Draw(shader);
-        model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(2.5f, 2.5f, 2.5f));
-
-        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        dog.Draw(shader);
 
         
 

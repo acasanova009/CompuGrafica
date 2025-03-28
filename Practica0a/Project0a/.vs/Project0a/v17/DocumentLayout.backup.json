@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\lighting.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Iluminacion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Iluminacion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\lighting.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\lighting.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lamp.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lamp.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\lamp.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Shader\\lighting.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "lamp.frag",
               "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lamp.frag",
               "RelativeDocumentMoniker": "Project0a\\Shader\\lamp.frag",
@@ -46,12 +46,11 @@
               "RelativeToolTip": "Project0a\\Shader\\lamp.frag",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-28T20:06:08.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T20:06:08.371Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "lamp.vs",
               "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lamp.vs",
               "RelativeDocumentMoniker": "Project0a\\Shader\\lamp.vs",
@@ -59,44 +58,42 @@
               "RelativeToolTip": "Project0a\\Shader\\lamp.vs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-28T20:06:05.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T20:06:05.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "lighting.frag",
               "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.frag",
               "RelativeDocumentMoniker": "Project0a\\Shader\\lighting.frag",
               "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.frag",
               "RelativeToolTip": "Project0a\\Shader\\lighting.frag",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAADAAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwDAAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-28T19:31:26.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T19:31:26.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "lighting.vs",
               "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.vs",
               "RelativeDocumentMoniker": "Project0a\\Shader\\lighting.vs",
               "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.vs",
               "RelativeToolTip": "Project0a\\Shader\\lighting.vs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-28T19:21:40.264Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Iluminacion.cpp",
               "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Iluminacion.cpp",
               "RelativeDocumentMoniker": "Project0a\\Iluminacion.cpp",
               "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Iluminacion.cpp",
               "RelativeToolTip": "Project0a\\Iluminacion.cpp",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAuwOwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIBAAAAAAAAAAAiwBgBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-28T19:18:59.098Z",
               "EditorCaption": ""
