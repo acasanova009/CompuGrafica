@@ -190,6 +190,11 @@ int main()
     }
     stbi_image_free(image);
 
+    // Load models
+    Model dog((char*)"Models/RedDog.obj");
+    
+
+
 
     // Game loop
     while (!glfwWindowShouldClose(window))
@@ -248,12 +253,25 @@ int main()
 
 
         // Draw the loaded model
-        glm::mat4 model(1);
-        model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
-        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        glBindVertexArray(VAO);
+        //glm::mat4 model(1);
+        //model = glm::scale(model, glm::vec3(3.0f, 3.0f, 3.0f));
+        //glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        //glBindVertexArray(VAO);
        
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        //glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
+        // Draw the loaded model
+
+        glm::mat4 model(1);
+        //glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        //dog.Draw(shader);
+        model = glm::translate(model, glm::vec3(3.0f, 0.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(2.5f, 2.5f, 2.5f));
+
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        dog.Draw(shader);
+
         
 
         glBindVertexArray(0);
