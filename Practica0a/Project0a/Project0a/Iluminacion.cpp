@@ -216,8 +216,14 @@ int main()
 
 
         // Set lights properties
-        
+        // Ambient light: low intensity
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "light.ambient"), 0.2f, 0.2f, 0.2f);
 
+        // Diffuse light: main light color
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "light.diffuse"), 0.5f, 0.5f, 0.5f);
+
+        // Specular light: highlights
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "light.specular"), 1.0f, 1.0f, 1.0f);
 
 
 
@@ -228,9 +234,17 @@ int main()
         // Set material properties
         
 
+       // Material ambient: base color under ambient light
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 1.0f, 0.5f, 0.31f);
 
+        // Material diffuse: main color of the object when lit
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 1.0f, 0.5f, 0.31f);
 
+        // Material specular: reflected light for highlights (white for plastic/metal)
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.5f, 0.5f, 0.5f);
 
+        // Material shininess: higher = smaller, sharper highlights (32–128 typical)
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 5.0f);
 
 
         // Draw the loaded model
