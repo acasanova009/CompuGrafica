@@ -129,7 +129,7 @@ int main( )
     
     // Load models
 	//Model dog((char*)"Models/RedDog.obj");
-    Model dog((char*)"Models/Gun.obj");
+    Model dog((char*)"Models/TinyHouse002_2021.obj");
     glm::mat4 projection = glm::mat4(1);
 
     projection = glm::perspective(glm::radians(45.0f), (GLfloat)screenWidth / (GLfloat)screenHeight, 0.01f, 1000000.0f);//FOV, Radio de aspecto,znear,zfar
@@ -178,9 +178,9 @@ int main( )
     //Inicio de la retícula--------------
     // Definir los vértices de la retícula (una cuadrícula en el plano XZ)
     std::vector<float> gridVertices;
-    float gridSize = 1.0f;       // Tamaño de la retícula (de -1 a 1 en X y Z)
-    float gridStep = 0.0999f;    // Separación entre líneas
-    float gridColor = 0.7f;      // Color gris para la retícula
+    float gridSize = 10.0f;       // Tamaño de la retícula (de -1 a 1 en X y Z)
+    float gridStep = 0.9999f;    // Separación entre líneas
+    float gridColor = 0.2f;      // Color gris para la retícula
 
     // Líneas paralelas al eje X
     for (float z = -gridSize; z <= gridSize; z += gridStep) {
@@ -244,7 +244,8 @@ int main( )
         //DoMovement();
 
         // 5.0 Agregar 
-        glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // blanco
+
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         // 5.5 Fin
 
@@ -253,7 +254,7 @@ int main( )
 
         // 6.0 Agregar
         glm::mat4 view = glm::mat4(1);
-        view = glm::translate(view, glm::vec3(movX, movY, movZ + 1.0f));
+        view = glm::translate(view, glm::vec3(movX, movY, movZ -10.0f));
         view = glm::rotate(view, glm::radians(roty + -40.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         view = glm::rotate(view, glm::radians(-rotx + 30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
         view = glm::rotate(view, glm::radians(rotz + -20.0f), glm::vec3(0.0f, 0.0f, 1.0f));
@@ -371,8 +372,8 @@ void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
 
 
         // Rotate around Z axis (Ctrl + Left Click)
-        movX += xoffset / 100.0f; // Adjust the factor as needed
-        movY += yoffset / 100.0f; // Adjust the factor as needed
+        movX += xoffset / 10.0f; // Adjust the factor as needed
+        movY += yoffset / 10.0f; // Adjust the factor as needed
         //std::cout << "Ctrl + Left Click: rotz = " << rotz << std::endl;
 
     }
@@ -386,6 +387,7 @@ void MouseCallback(GLFWwindow* window, double xpos, double ypos) {
         // Rotate around X and Y axes (Ctrl + Right Click)
         rotx += yoffset; // Rotate around the X-axis (vertical movement)
         roty += xoffset; // Rotate around the Y-axis (horizontal movement)
+
         // std::cout << "Ctrl + Right Click: rotx = " << rotx << ", roty = " << roty << std::endl;
 
     }
@@ -413,7 +415,7 @@ void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
 }
 
 void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
-    movZ += yoffset * 0.5f; // Adjust the zoom speed as needed
+    movZ += yoffset * 5.0f; // Adjust the zoom speed as needed
 }
 
 //Fin 9.9
