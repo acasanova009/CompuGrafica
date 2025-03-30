@@ -5,7 +5,4 @@ D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(382,37): war
 D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(388,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(389,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 D:\CompuGrafica\Practica0a\Project0a\Project0a\Carga de Modelos.cpp(418,21): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-soil2-debug.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_DXT.obj)' or at ''; linking object as if no debug info
-soil2-debug.lib(image_helper.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_helper.obj)' or at ''; linking object as if no debug info
-soil2-debug.lib(SOIL2.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(SOIL2.obj)' or at ''; linking object as if no debug info
   Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe

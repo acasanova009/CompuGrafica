@@ -128,7 +128,7 @@ int main( )
     Shader shader( "Shader/modelLoading.vs", "Shader/modelLoading.frag" );
     
     // Load models
-	//Model dog((char*)"Models/RedDog.obj");
+	//Model dog((char*)"Models/A.obj");
     Model dog((char*)"Models/TinyHouse002_2021.obj");
     glm::mat4 projection = glm::mat4(1);
 
