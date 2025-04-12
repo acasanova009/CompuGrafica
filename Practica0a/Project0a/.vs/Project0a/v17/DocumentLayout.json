@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\CompuGrafica\\Practica0a\\Project0a\\",
+  "WorkspaceRootPath": "D:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Carga de Modelos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -28,9 +28,7 @@
               "DocumentIndex": 1,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
-              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
-              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
               "ViewState": "AgIAAFMGAAAAAAAAAAAAwH0HAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-29T19:35:15.75Z"
@@ -39,11 +37,15 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Carga de Modelos.cpp",
-              "DocumentMoniker": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
               "RelativeDocumentMoniker": "Project0a\\Carga de Modelos.cpp",
-              "ToolTip": "C:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Carga de Modelos.cpp",
               "RelativeToolTip": "Project0a\\Carga de Modelos.cpp",
+<<<<<<< HEAD
               "ViewState": "AgIAALsAAAAAAAAAAAAAwH4AAAAkAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAwHQAAAA+AAAAAAAAAA==",
+>>>>>>> 3871783c780f91158adc1ccdb771e57c838d244c
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-29T18:51:43.898Z",
               "EditorCaption": ""
