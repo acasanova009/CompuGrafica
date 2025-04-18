@@ -2,15 +2,79 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl Metal_Aluminum_Anodized
+newmtl M_43_polished_brushed_stainless_texture
 Ka 0.000000 0.000000 0.000000
-Kd 0.792157 0.819608 0.858824
+Kd 0.419608 0.419608 0.419608
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Metal_Aluminum_Anodized.jpg
+map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture.jpg
 
 newmtl FrontColor
 Ka 0.000000 0.000000 0.000000
 Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl raw_plank_wall_diff_2k
+Ka 0.000000 0.000000 0.000000
+Kd 0.639216 0.501961 0.329412
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/raw_plank_wall_diff_2k.jpg
+
+newmtl Carpet_Plush_Charcoal
+Ka 0.000000 0.000000 0.000000
+Kd 0.341176 0.341176 0.341176
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
+
+newmtl plywood_diff_2k
+Ka 0.000000 0.000000 0.000000
+Kd 0.490196 0.376471 0.243137
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/plywood_diff_2k.jpg
+
+newmtl Color_I06
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.800000
+Ks 0.330000 0.330000 0.330000
+
+newmtl wood_table_001_diff_2k
+Ka 0.000000 0.000000 0.000000
+Kd 0.235294 0.098039 0.035294
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/wood_table_001_diff_2k.jpg
+
+newmtl Stone_Sandstone_Ashlar_Light
+Ka 0.000000 0.000000 0.000000
+Kd 0.807843 0.698039 0.501961
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Stone_Sandstone_Ashlar_Light.jpg
+
+newmtl M_101_wooden_slats_pbr_texture_seamless1
+Ka 0.000000 0.000000 0.000000
+Kd 0.278431 0.192157 0.113725
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/M_101_wooden_slats_pbr_texture_seamless1.jpg
+
+newmtl Wood_Floor_Dark
+Ka 0.000000 0.000000 0.000000
+Kd 0.600000 0.368627 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Wood_Floor_Dark.jpg
+
+newmtl Steel_Brushed_Stainless
+Ka 0.000000 0.000000 0.000000
+Kd 0.717647 0.733333 0.745098
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Steel_Brushed_Stainless.jpg
+
+newmtl wood_floor_worn_diff_2k
+Ka 0.000000 0.000000 0.000000
+Kd 0.533333 0.345098 0.176471
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/wood_floor_worn_diff_2k.jpg
+
+newmtl Color_C08
+Ka 0.000000 0.000000 0.000000
+Kd 0.400000 0.200000 0.000000
 Ks 0.330000 0.330000 0.330000
 
 newmtl Wood_Floor_Light
@@ -19,81 +83,23 @@ Kd 0.800000 0.690196 0.498039
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/Wood_Floor_Light.jpg
 
-newmtl Roofing_Tile_Spanish
-Ka 0.000000 0.000000 0.000000
-Kd 0.541176 0.250980 0.141176
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Roofing_Tile_Spanish.jpg
-
-newmtl Wood_Floor_Dark
-Ka 0.000000 0.000000 0.000000
-Kd 0.600000 0.368627 0.164706
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Wood_Floor_Dark.jpg
-
-newmtl Color_I06
-Ka 0.000000 0.000000 0.000000
-Kd 0.000000 0.000000 0.800000
-Ks 0.330000 0.330000 0.330000
-
-newmtl Carpet_Loop_Pattern
-Ka 0.000000 0.000000 0.000000
-Kd 0.650980 0.541176 0.349020
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Carpet_Loop_Pattern.jpg
-
-newmtl Stone_Sandstone_Ashlar_Light
-Ka 0.000000 0.000000 0.000000
-Kd 0.807843 0.698039 0.501961
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Stone_Sandstone_Ashlar_Light.jpg
-
-newmtl Upholstery_Striped_Multi_Colored
-Ka 0.000000 0.000000 0.000000
-Kd 0.588235 0.470588 0.415686
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Upholstery_Striped_Multi_Colored.jpg
-
-newmtl Metal_Seamed
-Ka 0.000000 0.000000 0.000000
-Kd 0.462745 0.466667 0.450980
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Metal_Seamed.jpg
-
-newmtl Steel_Brushed_Stainless
-Ka 0.000000 0.000000 0.000000
-Kd 0.717647 0.733333 0.745098
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Steel_Brushed_Stainless.jpg
-
-newmtl Wood_Floor_Parquet
-Ka 0.000000 0.000000 0.000000
-Kd 0.568627 0.349020 0.152941
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Wood_Floor_Parquet.jpg
-
-newmtl Color_C08
-Ka 0.000000 0.000000 0.000000
-Kd 0.400000 0.200000 0.000000
-Ks 0.330000 0.330000 0.330000
-
 newmtl Stone_Brushed_Khaki
 Ka 0.000000 0.000000 0.000000
 Kd 0.886275 0.772549 0.521569
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/Stone_Brushed_Khaki.jpg
 
-newmtl M_104_decorated_floral_parquet_texture_seamless
+newmtl woman_head_1
 Ka 0.000000 0.000000 0.000000
-Kd 0.525490 0.345098 0.164706
+Kd 0.803922 0.560784 0.388235
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_104_decorated_floral_parquet_texture_seamless.jpg
+map_Kd TinyHouse002_2021/woman_head_1.jpg
 
-newmtl rosewood_veneer1_diff_1k
+newmtl Carpet_Loop_Pattern
 Ka 0.000000 0.000000 0.000000
-Kd 0.423529 0.196078 0.054902
+Kd 0.650980 0.541176 0.349020
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/rosewood_veneer1_diff_1k.jpg
+map_Kd TinyHouse002_2021/Carpet_Loop_Pattern.jpg
 
 newmtl Color_C07
 Ka 0.000000 0.000000 0.000000
@@ -106,23 +112,11 @@ Kd 0.901961 0.901961 0.901961
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/Mirror_02.jpg
 
-newmtl Wood_Veneer_02
+newmtl M_43_polished_brushed_stainless_texture1_
 Ka 0.000000 0.000000 0.000000
-Kd 0.745098 0.501961 0.356863
+Kd 0.419608 0.419608 0.419608
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Wood_Veneer_02.jpg
-
-newmtl Fencing_Wood_Old
-Ka 0.000000 0.000000 0.000000
-Kd 0.517647 0.501961 0.494118
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Fencing_Wood_Old.jpg
-
-newmtl Carpet_Plush_Charcoal
-Ka 0.000000 0.000000 0.000000
-Kd 0.341176 0.341176 0.341176
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
+map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture1_.jpg
 
 newmtl Quartz_Light_Brown
 Ka 0.000000 0.000000 0.000000
@@ -134,4 +128,10 @@ newmtl Color_M07
 Ka 0.000000 0.000000 0.000000
 Kd 0.227451 0.227451 0.227451
 Ks 0.330000 0.330000 0.330000
+
+newmtl Picture1
+Ka 0.000000 0.000000 0.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+map_Kd TinyHouse002_2021/Picture1.jpg
 
