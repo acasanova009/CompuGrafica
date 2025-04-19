@@ -2,39 +2,11 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl M_43_polished_brushed_stainless_texture
-Ka 0.000000 0.000000 0.000000
-Kd 0.419608 0.419608 0.419608
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture.jpg
-
-newmtl FrontColor
-Ka 0.000000 0.000000 0.000000
-Kd 1.000000 1.000000 1.000000
-Ks 0.330000 0.330000 0.330000
-
-newmtl raw_plank_wall_diff_2k
-Ka 0.000000 0.000000 0.000000
-Kd 0.639216 0.501961 0.329412
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/raw_plank_wall_diff_2k.jpg
-
-newmtl Carpet_Plush_Charcoal
-Ka 0.000000 0.000000 0.000000
-Kd 0.341176 0.341176 0.341176
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
-
 newmtl plywood_diff_2k
 Ka 0.000000 0.000000 0.000000
 Kd 0.490196 0.376471 0.243137
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/plywood_diff_2k.jpg
-
-newmtl Color_I06
-Ka 0.000000 0.000000 0.000000
-Kd 0.000000 0.000000 0.800000
-Ks 0.330000 0.330000 0.330000
 
 newmtl wood_table_001_diff_2k
 Ka 0.000000 0.000000 0.000000
@@ -59,6 +31,18 @@ Ka 0.000000 0.000000 0.000000
 Kd 0.278431 0.192157 0.113725
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_101_wooden_slats_pbr_texture_seamless1.jpg
+
+newmtl M_43_polished_brushed_stainless_texture
+Ka 0.000000 0.000000 0.000000
+Kd 0.419608 0.419608 0.419608
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture.jpg
+
+newmtl raw_plank_wall_diff_2k
+Ka 0.000000 0.000000 0.000000
+Kd 0.639216 0.501961 0.329412
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/raw_plank_wall_diff_2k.jpg
 
 newmtl Wood_Floor_Dark
 Ka 0.000000 0.000000 0.000000
@@ -124,17 +108,6 @@ Kd 0.419608 0.419608 0.419608
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture1_.jpg
 
-newmtl Material_2
-Ka 0.000000 0.000000 0.000000
-Kd 0.800000 0.764706 0.701961
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Material_2.jpg
-
-newmtl Fawn
-Ka 0.000000 0.000000 0.000000
-Kd 0.682353 0.643137 0.568627
-Ks 0.330000 0.330000 0.330000
-
 newmtl Carpet_Berber_Pattern_Gray
 Ka 0.000000 0.000000 0.000000
 Kd 0.647059 0.647059 0.647059
@@ -155,6 +128,17 @@ Ks 0.330000 0.330000 0.330000
 newmtl Color_G15
 Ka 0.000000 0.000000 0.000000
 Kd 0.478431 0.600000 0.478431
+Ks 0.330000 0.330000 0.330000
+
+newmtl M_97_black_circular_brushed_stainless_metal_texture
+Ka 0.000000 0.000000 0.000000
+Kd 0.121569 0.121569 0.121569
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/M_97_black_circular_brushed_stainless_metal_texture.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
 
 newmtl LAPTOP_gray
@@ -222,12 +206,6 @@ Kd 0.592157 0.611765 0.631373
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_75_brushed_silver_metal_texture_seamless.jpg
 
-newmtl M_97_black_circular_brushed_stainless_metal_texture
-Ka 0.000000 0.000000 0.000000
-Kd 0.121569 0.121569 0.121569
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_97_black_circular_brushed_stainless_metal_texture.jpg
-
 newmtl _Silver_
 Ka 0.000000 0.000000 0.000000
 Kd 0.752941 0.752941 0.752941
@@ -255,20 +233,272 @@ Ka 0.000000 0.000000 0.000000
 Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
 
-newmtl Quartz_Light_Brown
+newmtl Carpet_Plush_Charcoal
 Ka 0.000000 0.000000 0.000000
-Kd 0.780392 0.721569 0.596078
+Kd 0.341176 0.341176 0.341176
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Quartz_Light_Brown.jpg
-
-newmtl Color_M07
-Ka 0.000000 0.000000 0.000000
-Kd 0.227451 0.227451 0.227451
-Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
 
 newmtl Picture1
 Ka 0.000000 0.000000 0.000000
 Kd 0.501961 0.501961 0.501961
 Ks 0.000000 0.000000 0.000000
 map_Kd TinyHouse002_2021/Picture1.jpg
+
+newmtl Granite_Dark_Gray
+Ka 0.000000 0.000000 0.000000
+Kd 0.270588 0.266667 0.266667
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Granite_Dark_Gray.jpg
+
+newmtl _Aluminum_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.898039 0.898039 0.898039
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/_Aluminum_1.png
+
+newmtl Material__4
+Ka 0.000000 0.000000 0.000000
+Kd 0.878431 0.823529 0.764706
+Ks 0.330000 0.330000 0.330000
+
+newmtl Material__3
+Ka 0.000000 0.000000 0.000000
+Kd 0.588235 0.588235 0.588235
+Ks 0.330000 0.330000 0.330000
+
+newmtl M_0136_Charcoal
+Ka 0.000000 0.000000 0.000000
+Kd 0.137255 0.137255 0.137255
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Charcoal_
+Ka 0.000000 0.000000 0.000000
+Kd 0.137255 0.137255 0.137255
+Ks 0.330000 0.330000 0.330000
+
+newmtl _12
+Ka 0.000000 0.000000 0.000000
+Kd 0.827451 0.827451 0.827451
+Ks 0.330000 0.330000 0.330000
+
+newmtl _0137_Black_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.990000
+
+newmtl Paint_Shiny_White1
+Ka 0.000000 0.000000 0.000000
+Kd 0.768627 0.113725 0.172549
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Paint_Shiny_White1.jpg
+
+newmtl Paint_Matte_Beige1
+Ka 0.000000 0.000000 0.000000
+Kd 0.286275 0.360784 0.631373
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Paint_Matte_Beige1.jpg
+
+newmtl Paint_Matte_White1
+Ka 0.000000 0.000000 0.000000
+Kd 0.721569 0.560784 0.168627
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Paint_Matte_White1.jpg
+
+newmtl Etched_White1
+Ka 0.000000 0.000000 0.000000
+Kd 0.423529 0.415686 0.388235
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Etched_White1.jpg
+
+newmtl Color_006
+Ka 0.000000 0.000000 0.000000
+Kd 0.337255 0.337255 0.337255
+Ks 0.330000 0.330000 0.330000
+
+newmtl Roofing_Metal_Standing_Seam_Red
+Ka 0.000000 0.000000 0.000000
+Kd 0.650980 0.274510 0.227451
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Roofing_Metal_Standing_Seam_Red.jpg
+
+newmtl PDM_Stem_Monstera
+Ka 0.000000 0.000000 0.000000
+Kd 0.262745 0.305882 0.211765
+Ks 0.330000 0.330000 0.330000
+
+newmtl PDM_Leaf_Monstera
+Ka 0.000000 0.000000 0.000000
+Kd 0.145098 0.709804 0.678431
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Leaf_Monstera.jpg
+
+newmtl PDM_West_Elm_Mid_Century_Tabletop_Planter_Material_01
+Ka 0.000000 0.000000 0.000000
+Kd 0.415686 0.380392 0.384314
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_West_Elm_Mid_Century_Tabletop_Planter_Material_01.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_1_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_2_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_2_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_3_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_3_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_4_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_4_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_5_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_5_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_6_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_6_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_02
+Ka 0.000000 0.000000 0.000000
+Kd 0.062745 0.062745 0.062745
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_02.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_7_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_7_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_8_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_8_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_9_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_9_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_10_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_10_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_11_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_11_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_12_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_12_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_13_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_13_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_14_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_14_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_15_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_15_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_16_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_16_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_17_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_17_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_18_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_18_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_19_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_19_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_20_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_20_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_21_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_21_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_22_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_22_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_23_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_23_.jpg
+
+newmtl PDM_Home_Depot_Ceramic_Pot_Material_01_24_
+Ka 0.000000 0.000000 0.000000
+Kd 0.592157 0.611765 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/PDM_Home_Depot_Ceramic_Pot_Material_01_24_.jpg
+
+newmtl Metal_Seamed
+Ka 0.000000 0.000000 0.000000
+Kd 0.462745 0.466667 0.450980
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Metal_Seamed.jpg
 
