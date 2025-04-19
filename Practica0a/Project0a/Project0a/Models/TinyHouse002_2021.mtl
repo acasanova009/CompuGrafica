@@ -2,11 +2,39 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
+newmtl M_43_polished_brushed_stainless_texture
+Ka 0.000000 0.000000 0.000000
+Kd 0.419608 0.419608 0.419608
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl raw_plank_wall_diff_2k
+Ka 0.000000 0.000000 0.000000
+Kd 0.639216 0.501961 0.329412
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/raw_plank_wall_diff_2k.jpg
+
+newmtl Carpet_Plush_Charcoal
+Ka 0.000000 0.000000 0.000000
+Kd 0.341176 0.341176 0.341176
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
+
 newmtl plywood_diff_2k
 Ka 0.000000 0.000000 0.000000
 Kd 0.490196 0.376471 0.243137
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/plywood_diff_2k.jpg
+
+newmtl Color_I06
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.800000
+Ks 0.330000 0.330000 0.330000
 
 newmtl wood_table_001_diff_2k
 Ka 0.000000 0.000000 0.000000
@@ -31,18 +59,6 @@ Ka 0.000000 0.000000 0.000000
 Kd 0.278431 0.192157 0.113725
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_101_wooden_slats_pbr_texture_seamless1.jpg
-
-newmtl M_43_polished_brushed_stainless_texture
-Ka 0.000000 0.000000 0.000000
-Kd 0.419608 0.419608 0.419608
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture.jpg
-
-newmtl raw_plank_wall_diff_2k
-Ka 0.000000 0.000000 0.000000
-Kd 0.639216 0.501961 0.329412
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/raw_plank_wall_diff_2k.jpg
 
 newmtl Wood_Floor_Dark
 Ka 0.000000 0.000000 0.000000
@@ -108,9 +124,37 @@ Kd 0.419608 0.419608 0.419608
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture1_.jpg
 
-newmtl FrontColor
+newmtl Material_2
 Ka 0.000000 0.000000 0.000000
-Kd 1.000000 1.000000 1.000000
+Kd 0.800000 0.764706 0.701961
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Material_2.jpg
+
+newmtl Fawn
+Ka 0.000000 0.000000 0.000000
+Kd 0.682353 0.643137 0.568627
+Ks 0.330000 0.330000 0.330000
+
+newmtl Carpet_Berber_Pattern_Gray
+Ka 0.000000 0.000000 0.000000
+Kd 0.647059 0.647059 0.647059
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Carpet_Berber_Pattern_Gray.jpg
+
+newmtl _6
+Ka 0.000000 0.000000 0.000000
+Kd 0.568627 0.450980 0.333333
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/_6.jpg
+
+newmtl Color_007
+Ka 0.000000 0.000000 0.000000
+Kd 0.227451 0.227451 0.227451
+Ks 0.330000 0.330000 0.330000
+
+newmtl Color_G15
+Ka 0.000000 0.000000 0.000000
+Kd 0.478431 0.600000 0.478431
 Ks 0.330000 0.330000 0.330000
 
 newmtl LAPTOP_gray
@@ -172,631 +216,59 @@ Ka 0.000000 0.000000 0.000000
 Kd 0.329412 0.329412 0.329412
 Ks 0.330000 0.330000 0.330000
 
-newmtl Carpet_Plush_Charcoal
-Ka 0.000000 0.000000 0.000000
-Kd 0.341176 0.341176 0.341176
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
-
 newmtl M_75_brushed_silver_metal_texture_seamless
 Ka 0.000000 0.000000 0.000000
 Kd 0.592157 0.611765 0.631373
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_75_brushed_silver_metal_texture_seamless.jpg
 
-newmtl _Color_008_1
+newmtl M_97_black_circular_brushed_stainless_metal_texture
 Ka 0.000000 0.000000 0.000000
-Kd 0.113725 0.113725 0.113725
+Kd 0.121569 0.121569 0.121569
 Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/M_97_black_circular_brushed_stainless_metal_texture.jpg
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2
+newmtl _Silver_
 Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
+Kd 0.752941 0.752941 0.752941
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2.jpg
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_1
+newmtl _Snow_
 Ka 0.000000 0.000000 0.000000
-Kd 0.470588 0.447059 0.415686
+Kd 1.000000 0.980392 0.980392
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_1.jpg
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_1_
+newmtl _7
 Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
+Kd 0.847059 0.847059 0.847059
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_1_.jpg
+d 0.750000
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_2_
+newmtl _Translucent_Glass_Gray_1
 Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
+Kd 0.498039 0.498039 0.498039
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_2_.jpg
+d 0.500000
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_3_
+newmtl Color_000
 Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
+Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_3_.jpg
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_4_
+newmtl Quartz_Light_Brown
 Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
+Kd 0.780392 0.721569 0.596078
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_4_.jpg
+map_Kd TinyHouse002_2021/Quartz_Light_Brown.jpg
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_5_
+newmtl Color_M07
 Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
+Kd 0.227451 0.227451 0.227451
 Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_5_.jpg
 
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_6_
+newmtl Picture1
 Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_6_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_7_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_7_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_8_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_8_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_9_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_9_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_10_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_10_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_11_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_11_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_12_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_12_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_13_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_13_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_14_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_14_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_15_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_15_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_16_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_16_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_17_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_17_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_18_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_18_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_19_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_19_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_20_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_20_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_21_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_21_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_22_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_22_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_23_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_23_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_24_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_24_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_25_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_25_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_26_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_26_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_27_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_27_.jpg
-
-newmtl _Color_005_1
-Ka 0.000000 0.000000 0.000000
-Kd 0.447059 0.447059 0.447059
-Ks 0.330000 0.330000 0.330000
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_28_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_28_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_29_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_29_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_30_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_30_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_31_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_31_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_32_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_32_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_33_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_33_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_34_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_34_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_35_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_35_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_36_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_36_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_37_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_37_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_38_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_38_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_39_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_39_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_40_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_40_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_41_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_41_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_42_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_42_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_43_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_43_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_44_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_44_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_45_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_45_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_46_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_46_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_47_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_47_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_48_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_48_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_49_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_49_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_50_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_50_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_51_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_51_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_52_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_52_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_53_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_53_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_54_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_54_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_55_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_55_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_56_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_56_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_57_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_57_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_58_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_58_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_59_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_59_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_60_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_60_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_61_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_61_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_62_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_62_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_63_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_63_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_64_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_64_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_65_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_65_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_66_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_66_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_67_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_67_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_68_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_68_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_69_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_69_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_70_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_70_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_71_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_71_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_72_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_72_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_73_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_73_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_74_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_74_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_75_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_75_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_76_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_76_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_77_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_77_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_78_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_78_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_79_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_79_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_80_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_80_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_81_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_81_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_82_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_82_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_83_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_83_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_84_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_84_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_85_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_85_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_86_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_86_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_87_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_87_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_88_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_88_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_89_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_89_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_90_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_90_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_91_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_91_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_92_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_92_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_93_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_93_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_94_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_94_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_95_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_95_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_96_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_96_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_97_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_97_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_98_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_98_.jpg
-
-newmtl M_1174_0_panasonic_nr_bw465xsvn_2_99_
-Ka 0.000000 0.000000 0.000000
-Kd 0.847059 0.839216 0.827451
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_1174_0_panasonic_nr_bw465xsvn_2_99_.jpg
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+map_Kd TinyHouse002_2021/Picture1.jpg
 
