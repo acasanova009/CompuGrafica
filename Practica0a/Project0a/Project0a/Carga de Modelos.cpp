@@ -244,7 +244,8 @@ int main( )
         //DoMovement();
 
         // 5.0 Agregar 
-        glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // blanco
+        glClearColor(0.53f, 0.81f, 0.98f, 1.0f); // azul cielo clarito
+
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         // 5.5 Fin
