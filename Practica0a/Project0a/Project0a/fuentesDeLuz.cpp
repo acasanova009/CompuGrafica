@@ -1,193 +1,210 @@
-#include <iostream>
-#include <cmath>
+#include <iostream>         // Librería estándar de C++ para entrada/salida (cout, cerr, etc.)
+#include <cmath>            // Librería matemática para funciones como sin(), cos(), etc.
 
-// GLEW
+// GLEW: Gestiona extensiones de OpenGL modernas
 #include <GL/glew.h>
 
-// GLFW
+// GLFW: Crea ventanas, gestiona eventos de entrada, y contexto de OpenGL
 #include <GLFW/glfw3.h>
 
-// Other Libs
+// stb_image: Carga imágenes para usarlas como texturas
 #include "stb_image.h"
 
-// GLM Mathematics
+// GLM: Biblioteca matemática para gráficos (vectores, matrices, transformaciones)
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/matrix_transform.hpp>   // Funciones como glm::translate, glm::rotate, glm::scale
+#include <glm/gtc/type_ptr.hpp>           // Convierte matrices/vectores a punteros para pasarlos a shaders
 
-//Load Models
+// SOIL2: Alternativa a stb_image, también para cargar texturas desde archivos
 #include "SOIL2/SOIL2.h"
 
-
-// Other includes
+// Clases personalizadas:
+// Shader: Clase para compilar y usar shaders de OpenGL (vertex, fragment)
+// Camera: Implementación de cámara en primera persona
+// Model: Carga y dibuja modelos 3D (por ejemplo, desde archivos .obj)
 #include "Shader.h"
 #include "Camera.h"
 #include "Model.h"
 
-// Function prototypes
-void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode);
-void MouseCallback(GLFWwindow *window, double xPos, double yPos);
-void DoMovement();
+// === Prototipos de funciones de callback (entrada de usuario) ===
+void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode);  // Teclado
+void MouseCallback(GLFWwindow* window, double xPos, double yPos);                   // Ratón
+void DoMovement();                                                                  // Movimiento de cámara
 
-// Window dimensions
-const GLuint WIDTH = 1600, HEIGHT = 1200;
-int SCREEN_WIDTH, SCREEN_HEIGHT;
+// === Dimensiones de la ventana principal ===
+const GLuint WIDTH = 1600, HEIGHT = 1200;  // Resolución inicial
+int SCREEN_WIDTH, SCREEN_HEIGHT;           // Se ajustan según el framebuffer real
 
-// Camera
-Camera  camera(glm::vec3(0.0f, 0.0f, 3.0f));
-GLfloat lastX = WIDTH / 2.0;
-GLfloat lastY = HEIGHT / 2.0;
-bool keys[1024];
-bool firstMouse = true;
-// Light attributes
-glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
-bool active;
+// === Cámara ===
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));  // Cámara colocada en Z=3, mirando hacia el origen
+GLfloat lastX = WIDTH / 2.0f;               // Posición del ratón al inicio (X)
+GLfloat lastY = HEIGHT / 2.0f;              // Posición del ratón al inicio (Y)
+bool keys[1024];                            // Estado de teclas presionadas
+bool firstMouse = true;                     // Para evitar saltos bruscos al mover el ratón por primera vez
 
-// Positions of the point lights
+// === Luz direccional y estados ===
+glm::vec3 lightPos(0.0f, 0.0f, 0.0f);       // Posición inicial de la luz (puede usarse como luz puntual o direccional)
+bool active;                                // Estado de encendido/apagado de una luz
+
+// === Posiciones de luces puntuales ===
+// Puedes activar hasta 4 luces en el shader y moverlas individualmente
 glm::vec3 pointLightPositions[] = {
-	glm::vec3(0.0f,0.0f, 0.0f),
-	glm::vec3(0.0f,0.0f, 0.0f),
-	glm::vec3(0.0f,0.0f,  0.0f),
-	glm::vec3(0.0f,0.0f, 0.0f)
+	glm::vec3(0.0f, 0.0f, 0.0f),  // Luz 0
+	glm::vec3(0.0f, 0.0f, 0.0f),  // Luz 1
+	glm::vec3(0.0f, 0.0f, 0.0f),  // Luz 2
+	glm::vec3(0.0f, 0.0f, 0.0f)   // Luz 3
 };
 
-
-
-
+// === Control dinámico de color de la luz ===
+// Light1 se usa para alterar el color de una luz puntual con sin() para lograr efectos animados
 glm::vec3 Light1 = glm::vec3(0);
 
-
-// Deltatime
-GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
-GLfloat lastFrame = 0.0f;  	// Time of last frame
+// === Control de tiempo entre frames ===
+// deltaTime: tiempo transcurrido entre el frame anterior y el actual
+// lastFrame: momento exacto en que ocurrió el último frame
+GLfloat deltaTime = 0.0f;
+GLfloat lastFrame = 0.0f;
 
 int main()
 {
-	// Init GLFW
+	// === Inicializa GLFW ===
 	glfwInit();
-	// Set all the required options for GLFW
-	/*glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
-	// Create a GLFWwindow object that we can use for GLFW's functions
+	// Opciones de contexto (comentadas pero útiles si usas OpenGL Core Profile moderno)
+	/*
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);           // OpenGL versión 3.x
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Core profile sin funciones obsoletas
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);     // Compatibilidad con Mac
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);                // Ventana no redimensionable
+	*/
+
+	// === Crea la ventana principal ===
 	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Fuentes de luz", nullptr, nullptr);
 
 	if (nullptr == window)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
-
 		return EXIT_FAILURE;
 	}
 
+	// Establece el contexto actual de OpenGL
 	glfwMakeContextCurrent(window);
 
+	// Obtiene el tamaño real del framebuffer (útil para pantallas HiDPI)
 	glfwGetFramebufferSize(window, &SCREEN_WIDTH, &SCREEN_HEIGHT);
 
-	// Set the required callback functions
-	glfwSetKeyCallback(window, KeyCallback);
-	glfwSetCursorPosCallback(window, MouseCallback);
+	// === Registra callbacks de entrada ===
+	glfwSetKeyCallback(window, KeyCallback);           // Teclado
+	glfwSetCursorPosCallback(window, MouseCallback);   // Ratón
 
-	// GLFW Options
-	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	// === Configura el modo del cursor (opcional: oculta y centra el cursor) ===
+	// glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-	// Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
+	// === Inicializa GLEW para usar funciones modernas de OpenGL ===
 	glewExperimental = GL_TRUE;
-	// Initialize GLEW to setup the OpenGL Function pointers
 	if (GLEW_OK != glewInit())
 	{
 		std::cout << "Failed to initialize GLEW" << std::endl;
 		return EXIT_FAILURE;
 	}
 
-	// Define the viewport dimensions
+	// === Define el área visible del viewport (normalmente igual a la resolución de pantalla) ===
 	glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
 
-
+	// === Carga de Shaders ===
+// lightingShader: Shader principal con iluminación (vertex y fragment)
+// lampShader: Shader más simple, usado para dibujar los cubos que representan las luces
 	Shader lightingShader("Shader/lighting.vs", "Shader/lighting.frag");
 	Shader lampShader("Shader/lamp.vs", "Shader/lamp.frag");
-	
-	Model Crystal((char*)"Models/Crystal.obj");
-	Model Ground((char*)"Models/Ground.obj");
-	Model Tiny((char*)"Models/TinyHouse002_2021.obj");
-	Model Piso((char*)"Models/piso.obj");
 
+	// === Carga de Modelos 3D (.obj) ===
+	// Cada uno se carga a partir de un archivo .obj ubicado en la carpeta Models/
+	Model Crystal((char*)"Models/Crystal.obj");               // Modelo decorativo (ej. cristal)
+	Model Ground((char*)"Models/Ground.obj");                 // Piso o suelo del escenario
+	Model Tiny((char*)"Models/TinyHouse002_2021.obj");        // Casa o estructura principal
 
+	// === Asignación de unidades de textura a los uniforms del shader ===
+	lightingShader.Use();  // Activa el shader antes de modificar sus uniforms
 
-	
-	// Set texture units
-	lightingShader.Use();
+	// Vincula el uniform Material.difuse al GL_TEXTURE0
 	glUniform1i(glGetUniformLocation(lightingShader.Program, "Material.difuse"), 0);
+
+	// Vincula el uniform Material.specular al GL_TEXTURE1
 	glUniform1i(glGetUniformLocation(lightingShader.Program, "Material.specular"), 1);
 
-	glm::mat4 projection = glm::perspective(camera.GetZoom(), (GLfloat)SCREEN_WIDTH / (GLfloat)SCREEN_HEIGHT, 0.1f, 100.0f);
+	// === Matriz de proyección en perspectiva ===
+	// Define un campo de visión (FOV), una relación de aspecto, y planos cercanos/lejanos
+	// Esto simula cómo ve una cámara real: objetos más lejanos se ven más pequeños
+	glm::mat4 projection = glm::perspective(
+		camera.GetZoom(),                                 // Campo de visión (zoom)
+		(GLfloat)SCREEN_WIDTH / (GLfloat)SCREEN_HEIGHT,   // Relación de aspecto
+		0.1f,                                              // Plano cercano
+		100.0f                                             // Plano lejano
+	);
 
-	// Game loop
+	// === Bucle principal de renderizado ===
+// Este ciclo se ejecuta mientras la ventana no se haya cerrado manualmente
 	while (!glfwWindowShouldClose(window))
 	{
+		// === Calcular tiempo entre frames ===
+		// Esto permite que el movimiento y animaciones sean consistentes independientemente del framerate
+		GLfloat currentFrame = glfwGetTime();          // Tiempo actual
+		deltaTime = currentFrame - lastFrame;          // Diferencia entre frames
+		lastFrame = currentFrame;                      // Actualiza el tiempo del último frame
 
-		// Calculate deltatime of current frame
-		GLfloat currentFrame = glfwGetTime();
-		deltaTime = currentFrame - lastFrame;
-		lastFrame = currentFrame;
-
-		// Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
+		// === Procesar eventos de entrada del sistema operativo (teclado, mouse, etc.) ===
 		glfwPollEvents();
-		DoMovement();
+		DoMovement();  // Aplica movimiento a la cámara basado en teclas presionadas
 
-		// Clear the colorbuffer
-		glClearColor(0.529f, 0.808f, 0.922f, 1.0f); // Sky blue (estilo "Deep Sky Blue")
+		// === Limpiar el buffer de color y profundidad ===
+		glClearColor(0.529f, 0.808f, 0.922f, 1.0f);     // Color de fondo (azul cielo)
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  // Borra color y z-buffer
 
-
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	   
-		// OpenGL options
+		// === Habilitar el test de profundidad (Z-buffer) para render 3D correcto ===
 		glEnable(GL_DEPTH_TEST);
 
-		
-		
-		//Load Model
-	
-
-		// Use cooresponding shader when setting uniforms/drawing objects
+		// === Activar shader principal con iluminación ===
 		lightingShader.Use();
 
-        glUniform1i(glGetUniformLocation(lightingShader.Program, "diffuse"), 0);
-		//glUniform1i(glGetUniformLocation(lightingShader.Program, "specular"),1);
+		// (Opcional) Uniform para textura difusa si no está establecido globalmente
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "diffuse"), 0);
+		// glUniform1i(glGetUniformLocation(lightingShader.Program, "specular"), 1); // Solo si se usa mapa especular
 
+		// === Enviar posición de la cámara al shader (útil para iluminación especular) ===
 		GLint viewPosLoc = glGetUniformLocation(lightingShader.Program, "viewPos");
-		glUniform3f(viewPosLoc, camera.GetPosition().x, camera.GetPosition().y, camera.GetPosition().z);
+		glUniform3f(viewPosLoc,
+			camera.GetPosition().x,
+			camera.GetPosition().y,
+			camera.GetPosition().z
+		);
 
+		// === Configurar luz direccional (tipo sol) ===
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.direction"), 2.0f, -1.0f, -0.3f);  // Dirección de la luz
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"), 0.8f, 0.8f, 0.8f);    // Luz ambiental (iluminación general)
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.3f, 0.3f, 0.3f);    // Luz difusa (iluminación desde dirección)
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 0.0f, 0.0f, 0.0f);    // Luz especular (reflejo)
+ 
+		// === Luz puntual 1 (dinámica) ===
+// Esta luz varía su color con el tiempo usando funciones seno
+// Para efectos visuales animados tipo neón o RGB
+		glm::vec3 lightColor;
+		lightColor.x = abs(sin(glfwGetTime() * Light1.x));  // Componente roja
+		lightColor.y = abs(sin(glfwGetTime() * Light1.y));  // Componente verde
+		lightColor.z = sin(glfwGetTime() * Light1.z);       // Componente azul
 
-		// Directional light
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.direction"), 2.0f, -1.0f, -0.3f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"),0.8f,0.8f,0.8f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.3f, 0.3f, 0.3f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"),0.0f, 0.0f, 0.0f);
-
-
-		// Point light 1
-	    glm::vec3 lightColor;
-		lightColor.x= abs(sin(glfwGetTime() *Light1.x));
-		lightColor.y= abs(sin(glfwGetTime() *Light1.y));
-		lightColor.z= sin(glfwGetTime() *Light1.z);
-
-		
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[0].position"), pointLightPositions[0].x, pointLightPositions[0].y, pointLightPositions[0].z);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[0].ambient"), lightColor.x,lightColor.y, lightColor.z);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[0].diffuse"), lightColor.x,lightColor.y,lightColor.z);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[0].specular"), 1.0f, 1.0f, 0.0f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[0].ambient"), lightColor.x, lightColor.y, lightColor.z);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[0].diffuse"), lightColor.x, lightColor.y, lightColor.z);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[0].specular"), 1.0f, 1.0f, 0.0f);  // Especular fija
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[0].constant"), 1.0f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[0].linear"), 0.045f);
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[0].quadratic"),0.075f);
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[0].quadratic"), 0.075f);
 
-
-
-		// Point light 2
+		// === Luz puntual 2 (inactiva) ===
+		// Puedes activarla o configurar sus valores para otro propósito
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[1].position"), pointLightPositions[1].x, pointLightPositions[1].y, pointLightPositions[1].z);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[1].ambient"), 0.05f, 0.05f, 0.05f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[1].diffuse"), 0.0f, 0.0f, 0.0f);
@@ -196,7 +213,7 @@ int main()
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[1].linear"), 0.0f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[1].quadratic"), 0.0f);
 
-		//// Point light 3
+		// === Luz puntual 3 (inactiva) ===
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[2].position"), pointLightPositions[2].x, pointLightPositions[2].y, pointLightPositions[2].z);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[2].ambient"), 0.0f, 0.0f, 0.0f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[2].diffuse"), 0.0f, 0.0f, 0.0f);
@@ -205,7 +222,7 @@ int main()
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[2].linear"), 0.0f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[2].quadratic"), 0.0f);
 
-		//// Point light 4
+		// === Luz puntual 4 (inactiva) ===
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[3].position"), pointLightPositions[3].x, pointLightPositions[3].y, pointLightPositions[3].z);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[3].ambient"), 0.0f, 0.0f, 0.0f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "pointLights[3].diffuse"), 0.0f, 0.0f, 0.0f);
@@ -214,17 +231,27 @@ int main()
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[3].linear"), 0.0f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[3].quadratic"), 0.0f);
 
-		// SpotLight
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.position"), camera.GetPosition().x, camera.GetPosition().y, camera.GetPosition().z);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.direction"), camera.GetFront().x, camera.GetFront().y, camera.GetFront().z);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.ambient"), 0.0f, 0.0f, 0.0f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.diffuse"), 0.0f, 0.0f, 0.0f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.specular"),0.0f, 0.0f, 0.0f);
+		// === Luz tipo linterna (spotLight) ===
+		// Esta luz sigue la cámara (como una linterna en primera persona)
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.position"),
+			camera.GetPosition().x, camera.GetPosition().y, camera.GetPosition().z);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.direction"),
+			camera.GetFront().x, camera.GetFront().y, camera.GetFront().z);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.ambient"), 0.0f, 0.0f, 0.0f); // Luz tenue base
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.diffuse"), 0.0f, 0.0f, 0.0f); // Luz principal (por defecto apagada)
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.specular"), 0.0f, 0.0f, 0.0f); // Reflejos (por defecto apagados)
+
+		// Atenuación (decaimiento de la luz con la distancia)
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.constant"), 1.0f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.linear"), 0.3f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.quadratic"), 0.7f);
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.cutOff"), glm::cos(glm::radians(12.0f)));
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.outerCutOff"), glm::cos(glm::radians(18.0f)));
+
+		// Ángulos de corte del haz de luz (cono de la linterna)
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.cutOff"),
+			glm::cos(glm::radians(12.0f)));  // Núcleo del haz
+		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.outerCutOff"),
+			glm::cos(glm::radians(18.0f)));  // Suavizado del borde
+
 
 		// Set material properties
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 16.0f);
@@ -244,83 +271,33 @@ int main()
 
 
 		glm::mat4 model(1);
-
-	
-
-		//Carga de modelo 
-        view = camera.GetViewMatrix();	
-		model = glm::mat4(1);
-		//model = glm::translate(model, glm::vec3(0.0f, 3.9f, 0.0f));
-		//model = glm::scale(model, glm::vec3(10.0f));
+		// === Carga y renderizado del modelo Ground (suelo) ===
+// Aplica la matriz de vista y una matriz modelo identidad (sin transformaciones)
+		view = camera.GetViewMatrix();
+		model = glm::mat4(1);  // Sin traslación ni escalado
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Ground.Draw(lightingShader);
+		Ground.Draw(lightingShader);  // Dibuja el modelo del piso
 
-
+		// === Renderizado del modelo Tiny (la tiny house) ===
+		// Se activa la funcionalidad de mezcla alfa para permitir transparencia si es necesaria
 		model = glm::mat4(1);
-		//glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // Configura el modo de mezcla
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);  // Uniform que controla transparencia en el shader
+		Tiny.Draw(lightingShader);  // Dibuja la casa
+		glBindVertexArray(0);  // Desvincula el VAO para prevenir errores
+
+		// === Renderizado del modelo Crystal (modelo decorativo transparente) ===
+		model = glm::mat4(1);
+
+		glEnable(GL_BLEND);  // Se activa el canal alfa para manejar transparencia del cristal
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
-		Tiny.Draw(lightingShader);
-		//glDisable(GL_BLEND);  //Desactiva el canal alfa 
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);  // Se puede cambiar a 1 si el shader lo maneja como booleano
+		Crystal.Draw(lightingShader);  // Dibuja el modelo del cristal
+		glDisable(GL_BLEND);           // Desactiva la mezcla una vez dibujado
 		glBindVertexArray(0);
 
-	
-		model = glm::mat4(1);
-		//model = glm::translate(model, glm::vec3(0.0f, 3.9f, 0.0f));
-		//model = glm::scale(model, glm::vec3(0.5f));
-		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
-		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
-	    Crystal.Draw(lightingShader);
-		glDisable(GL_BLEND);  //Desactiva el canal alfa 
-		glBindVertexArray(0);
-	
-
-		// Also draw the lamp object, again binding the appropriate shader
-		//lampShader.Use();
-		//// Get location objects for the matrices on the lamp shader (these could be different on a different shader)
-		//modelLoc = glGetUniformLocation(lampShader.Program, "model");
-		//viewLoc = glGetUniformLocation(lampShader.Program, "view");
-		//projLoc = glGetUniformLocation(lampShader.Program, "projection");
-
-		//// Set matrices for lamp shader
-		//glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		//glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-
-		//// Set model matrix for point light cube at index 1
-		//model = glm::mat4(1.0f);
-		//model = glm::translate(model, pointLightPositions[1]);
-		//model = glm::scale(model, glm::vec3(0.2f)); // Smaller cube
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
-		//// Draw the cube
-		//glBindVertexArray(VAO);
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
-		//glBindVertexArray(0);
-
-
-		//// Set matrices
-		//glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-		//glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-		//model = glm::mat4(1);
-		//model = glm::translate(model, lightPos);
-		//model = glm::scale(model, glm::vec3(0.2f)); // Make it a smaller cube
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//
-		//
-		//// Draw the light object (using light's vertex attributes)
-		///*for (GLuint i = 0; i < 4; i++)
-		//{*/
-		//	model = glm::mat4(1);
-		//	model = glm::translate(model, pointLightPositions[1]);
-		//	model = glm::scale(model, glm::vec3(0.2f)); // Make it a smaller cube
-		//	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//	glBindVertexArray(VAO);
-		//	glDrawArrays(GL_TRIANGLES, 0, 36);
-		////}
-		//glBindVertexArray(0);
 
 
 
@@ -369,33 +346,6 @@ void DoMovement()
 
 	}
 
-	if (keys[GLFW_KEY_T])
-	{
-		pointLightPositions[0].x += 0.01f;
-	}
-	if (keys[GLFW_KEY_G])
-	{
-		pointLightPositions[0].x -= 0.01f;
-	}
-
-	if (keys[GLFW_KEY_Y])
-	{
-		pointLightPositions[0].y += 0.01f;
-	}
-
-	if (keys[GLFW_KEY_H])
-	{
-		pointLightPositions[0].y -= 0.01f;
-	}
-	if (keys[GLFW_KEY_U])
-	{
-		pointLightPositions[0].z -= 0.1f;
-	}
-	if (keys[GLFW_KEY_J])
-	{
-		pointLightPositions[0].z += 0.01f;
-	}
-	
 }
 
 // Is called whenever a key is pressed/released via GLFW

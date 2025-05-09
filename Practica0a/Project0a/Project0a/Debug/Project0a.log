@@ -1,24 +1,29 @@
 ﻿  fuentesDeLuz.cpp
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(190,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:         with
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:         [
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:             T=float
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:         ]
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:         with
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:         [
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:             T=float
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:         ]
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:         with
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:         [
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:             T=float
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:         ]
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(495,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(496,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(500,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(501,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(503,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(504,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(154,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(194,21): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(194,21): warning C4244:         with
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(194,21): warning C4244:         [
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(194,21): warning C4244:             T=float
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(194,21): warning C4244:         ]
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(195,21): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(195,21): warning C4244:         with
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(195,21): warning C4244:         [
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(195,21): warning C4244:             T=float
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(195,21): warning C4244:         ]
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(196,21): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(196,21): warning C4244:         with
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(196,21): warning C4244:         [
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(196,21): warning C4244:             T=float
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(196,21): warning C4244:         ]
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(389,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(390,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(394,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(395,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(397,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(398,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+soil2-debug.lib(etc1_utils.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(etc1_utils.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_DXT.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_helper.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_helper.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(SOIL2.obj)' or at ''; linking object as if no debug info
   Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
