@@ -49,11 +49,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fuentesDeLuz.cpp",
+              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\fuentesDeLuz.cpp",
+              "RelativeDocumentMoniker": "Project0a\\fuentesDeLuz.cpp",
+              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\fuentesDeLuz.cpp*",
+              "RelativeToolTip": "Project0a\\fuentesDeLuz.cpp*",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAWwKMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-09T13:03:47.734Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -63,7 +76,7 @@
               "RelativeDocumentMoniker": "Project0a\\Shader\\lighting.vs",
               "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.vs",
               "RelativeToolTip": "Project0a\\Shader\\lighting.vs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-09T11:05:13.929Z",
               "EditorCaption": ""
@@ -76,7 +89,7 @@
               "RelativeDocumentMoniker": "Project0a\\Shader\\lighting.frag",
               "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.frag",
               "RelativeToolTip": "Project0a\\Shader\\lighting.frag",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-09T11:05:13.103Z",
               "EditorCaption": ""
@@ -157,19 +170,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-05-09T11:04:47.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fuentesDeLuz.cpp",
-              "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\fuentesDeLuz.cpp",
-              "RelativeDocumentMoniker": "Project0a\\fuentesDeLuz.cpp",
-              "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\fuentesDeLuz.cpp",
-              "RelativeToolTip": "Project0a\\fuentesDeLuz.cpp",
-              "ViewState": "AgIAADUBAAAAAAAAAAAAAEUBAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-09T10:47:53.472Z",
               "EditorCaption": ""
             },
             {

@@ -1,24 +1,24 @@
 ﻿  fuentesDeLuz.cpp
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(189,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(229,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(229,20): warning C4244:         with
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(229,20): warning C4244:         [
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(229,20): warning C4244:             T=float
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(229,20): warning C4244:         ]
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(230,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(230,20): warning C4244:         with
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(230,20): warning C4244:         [
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(230,20): warning C4244:             T=float
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(230,20): warning C4244:         ]
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(190,24): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
 D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
 D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:         with
 D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:         [
 D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:             T=float
 D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(231,20): warning C4244:         ]
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(475,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(476,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(480,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(481,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(483,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(484,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:         with
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:         [
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:             T=float
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(232,20): warning C4244:         ]
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:         with
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:         [
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:             T=float
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(233,20): warning C4244:         ]
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(495,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(496,11): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(500,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(501,18): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(503,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CompuGrafica\Practica0a\Project0a\Project0a\fuentesDeLuz.cpp(504,10): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
   Project0a.vcxproj -> D:\CompuGrafica\Practica0a\Project0a\Debug\Project0a.exe
