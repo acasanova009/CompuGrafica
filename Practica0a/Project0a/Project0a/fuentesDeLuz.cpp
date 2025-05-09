@@ -30,7 +30,7 @@ void MouseCallback(GLFWwindow *window, double xPos, double yPos);
 void DoMovement();
 
 // Window dimensions
-const GLuint WIDTH = 800, HEIGHT = 600;
+const GLuint WIDTH = 1600, HEIGHT = 1200;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Camera
@@ -154,8 +154,8 @@ int main()
 	Shader lightingShader("Shader/lighting.vs", "Shader/lighting.frag");
 	Shader lampShader("Shader/lamp.vs", "Shader/lamp.frag");
 	
-	Model Dog((char*)"Models/TinyHouse002_2021.obj");
-	//Model Dog((char*)"Models/ball.obj");
+	Model Crystal((char*)"Models/Crystal.obj");
+	Model Tiny((char*)"Models/TinyHouse002_2021.obj");
 	Model Piso((char*)"Models/piso.obj");
 
 
@@ -195,7 +195,8 @@ int main()
 		DoMovement();
 
 		// Clear the colorbuffer
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClearColor(0.6f, 0.8f, 1.0f, 1.0f);
+
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	   
 		// OpenGL options
@@ -303,18 +304,31 @@ int main()
 		//Carga de modelo 
         view = camera.GetViewMatrix();	
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 3.9f, 0.0f));
+		model = glm::scale(model, glm::vec3(10.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Piso.Draw(lightingShader);
 
 
-	
 		model = glm::mat4(1);
 		//glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
-	    Dog.Draw(lightingShader);
+		Tiny.Draw(lightingShader);
 		//glDisable(GL_BLEND);  //Desactiva el canal alfa 
+		glBindVertexArray(0);
+
+	
+		model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(0.0f, 3.9f, 0.0f));
+		//model = glm::scale(model, glm::vec3(0.5f));
+		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
+	    Crystal.Draw(lightingShader);
+		glDisable(GL_BLEND);  //Desactiva el canal alfa 
 		glBindVertexArray(0);
 	
 
@@ -454,7 +468,7 @@ void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode
 	}
 }
 
-void MouseCallback(GLFWwindow *window, double xPos, double yPos)
+void MouseCallback(GLFWwindow* window, double xPos, double yPos)
 {
 	if (firstMouse)
 	{
@@ -464,10 +478,15 @@ void MouseCallback(GLFWwindow *window, double xPos, double yPos)
 	}
 
 	GLfloat xOffset = xPos - lastX;
-	GLfloat yOffset = lastY - yPos;  // Reversed since y-coordinates go from bottom to left
+	GLfloat yOffset = lastY - yPos;  // Reversed since y-coordinates go from bottom to top
 
 	lastX = xPos;
 	lastY = yPos;
+
+	// Aumenta este valor para más sensibilidad (ej. 0.2, 0.3, etc.)
+	float sensitivity = 3.0f;
+	xOffset *= sensitivity;
+	yOffset *= sensitivity;
 
 	camera.ProcessMouseMovement(xOffset, yOffset);
 }

@@ -2,11 +2,39 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
+newmtl M_43_polished_brushed_stainless_texture
+Ka 0.000000 0.000000 0.000000
+Kd 0.419608 0.419608 0.419608
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl raw_plank_wall_diff_2k
+Ka 0.000000 0.000000 0.000000
+Kd 0.639216 0.501961 0.329412
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/raw_plank_wall_diff_2k.jpg
+
+newmtl Carpet_Plush_Charcoal
+Ka 0.000000 0.000000 0.000000
+Kd 0.341176 0.341176 0.341176
+Ks 0.330000 0.330000 0.330000
+map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
+
 newmtl plywood_diff_2k
 Ka 0.000000 0.000000 0.000000
 Kd 0.490196 0.376471 0.243137
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/plywood_diff_2k.jpg
+
+newmtl Color_I06
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.800000
+Ks 0.330000 0.330000 0.330000
 
 newmtl wood_table_001_diff_2k
 Ka 0.000000 0.000000 0.000000
@@ -31,18 +59,6 @@ Ka 0.000000 0.000000 0.000000
 Kd 0.278431 0.192157 0.113725
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_101_wooden_slats_pbr_texture_seamless1.jpg
-
-newmtl M_43_polished_brushed_stainless_texture
-Ka 0.000000 0.000000 0.000000
-Kd 0.419608 0.419608 0.419608
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/M_43_polished_brushed_stainless_texture.jpg
-
-newmtl raw_plank_wall_diff_2k
-Ka 0.000000 0.000000 0.000000
-Kd 0.639216 0.501961 0.329412
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/raw_plank_wall_diff_2k.jpg
 
 newmtl Wood_Floor_Dark
 Ka 0.000000 0.000000 0.000000
@@ -113,11 +129,6 @@ Ka 0.000000 0.000000 0.000000
 Kd 0.121569 0.121569 0.121569
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/M_97_black_circular_brushed_stainless_metal_texture.jpg
-
-newmtl FrontColor
-Ka 0.000000 0.000000 0.000000
-Kd 1.000000 1.000000 1.000000
-Ks 0.330000 0.330000 0.330000
 
 newmtl LAPTOP_gray
 Ka 0.000000 0.000000 0.000000
@@ -210,12 +221,6 @@ newmtl Color_000
 Ka 0.000000 0.000000 0.000000
 Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
-
-newmtl Carpet_Plush_Charcoal
-Ka 0.000000 0.000000 0.000000
-Kd 0.341176 0.341176 0.341176
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/Carpet_Plush_Charcoal.jpg
 
 newmtl Picture1
 Ka 0.000000 0.000000 0.000000
@@ -513,10 +518,4 @@ Ka 0.000000 0.000000 0.000000
 Kd 0.462745 0.466667 0.450980
 Ks 0.330000 0.330000 0.330000
 map_Kd TinyHouse002_2021/Metal_Seamed.jpg
-
-newmtl coast_sand_rocks_02_diff_2k
-Ka 0.000000 0.000000 0.000000
-Kd 0.286275 0.266667 0.168627
-Ks 0.330000 0.330000 0.330000
-map_Kd TinyHouse002_2021/coast_sand_rocks_02_diff_2k.jpg
 
