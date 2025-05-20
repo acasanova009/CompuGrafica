@@ -3,11 +3,12 @@
   "WorkspaceRootPath": "D:\\CompuGrafica\\Practica0a\\Project0a\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\fuentesDeLuz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\fuentesDeLuz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alfon\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\RX6E30CP\\fuentesDeLuz[1].cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\fuentesDeLuz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\fuentesDeLuz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lighting.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -50,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Mesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB774BC5-DEAC-4114-A238-323830C676B8}|Project0a\\Project0a.vcxproj|solutionrelative:Project0a\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CompuGrafica\\Practica0a\\Project0a\\External Libraries\\glm\\glm\\glm.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:External Libraries\\glm\\glm\\glm.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -72,22 +69,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fuentesDeLuz[1].cpp",
-              "DocumentMoniker": "C:\\Users\\alfon\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\RX6E30CP\\fuentesDeLuz[1].cpp",
-              "ToolTip": "C:\\Users\\alfon\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\RX6E30CP\\fuentesDeLuz[1].cpp [Read Only]",
-              "ViewState": "AgIAAKcBAAAAAAAAAAAiwMMBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-20T21:16:10.142Z",
-              "EditorCaption": " [Read Only]"
             },
             {
               "$type": "Document",
@@ -139,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "glm.hpp",
               "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\External Libraries\\glm\\glm\\glm.hpp",
               "RelativeDocumentMoniker": "External Libraries\\glm\\glm\\glm.hpp",
@@ -151,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "fuentesDeLuz.cpp",
               "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\fuentesDeLuz.cpp",
               "RelativeDocumentMoniker": "Project0a\\fuentesDeLuz.cpp",
@@ -189,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "lamp.vs",
               "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Shader\\lamp.vs",
               "RelativeDocumentMoniker": "Project0a\\Shader\\lamp.vs",
@@ -237,15 +223,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "Camera.h",
               "DocumentMoniker": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Camera.h",
               "RelativeDocumentMoniker": "Project0a\\Camera.h",
               "ToolTip": "D:\\CompuGrafica\\Practica0a\\Project0a\\Project0a\\Camera.h",
               "RelativeToolTip": "Project0a\\Camera.h",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAiwJgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-09T11:04:49.045Z"
+              "WhenOpened": "2025-05-09T11:04:49.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -261,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\vector",
