@@ -1,0 +1,27 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl Metal_Corrugated_Shiny
+Ka 0.000000 0.000000 0.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.330000 0.330000 0.330000
+map_Kd microwave/Metal_Corrugated_Shiny.jpg
+
+newmtl MICROONDAS
+Ka 0.000000 0.000000 0.000000
+Kd 0.125490 0.125490 0.125490
+Ks 0.330000 0.330000 0.330000
+map_Kd microwave/MICROONDAS.png
+
+newmtl M_43_polished_brushed_stainless_texture
+Ka 0.000000 0.000000 0.000000
+Kd 0.419608 0.419608 0.419608
+Ks 0.330000 0.330000 0.330000
+map_Kd microwave/M_43_polished_brushed_stainless_texture.jpg
+
+newmtl _34
+Ka 0.000000 0.000000 0.000000
+Kd 0.329412 0.329412 0.329412
+Ks 0.330000 0.330000 0.330000
+
